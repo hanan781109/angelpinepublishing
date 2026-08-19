@@ -1,0 +1,1717 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Angel Pine Publishing</title>
+<meta name="description" content="Angel Pine Publishing — professional publishing, editing, ghostwriting, design and marketing services.">
+
+<style>
+:root{
+    --cream:#f6f1e7;
+    --cream2:#eee7d8;
+    --green:#173f32;
+    --green2:#245a48;
+    --light-green:#dfe9df;
+    --white:#fffdf8;
+    --text:#17352d;
+    --muted:#66736b;
+    --orange:#d8893d;
+    --border:#d9d3c5;
+}
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:var(--cream);
+    color:var(--text);
+    overflow-x:hidden;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+button,
+input,
+textarea{
+    font:inherit;
+}
+
+/* HEADER */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(246,241,231,.94);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid rgba(23,63,50,.10);
+}
+
+.nav{
+    max-width:1240px;
+    height:82px;
+    margin:auto;
+    padding:0 25px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-family:Georgia,serif;
+    font-size:20px;
+    font-weight:700;
+    letter-spacing:.2px;
+}
+
+.logo-mark{
+    width:43px;
+    height:43px;
+    border:2px solid var(--green);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
+}
+
+.menu-btn{
+    width:48px;
+    height:48px;
+    border:1px solid var(--green);
+    background:transparent;
+    color:var(--green);
+    border-radius:50%;
+    cursor:pointer;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:5px;
+}
+
+.menu-btn span{
+    width:20px;
+    height:2px;
+    background:var(--green);
+    transition:.25s;
+}
+
+/* SIDE MENU */
+
+.side-menu{
+    position:fixed;
+    top:0;
+    right:-390px;
+    width:min(390px,90vw);
+    height:100vh;
+    background:var(--green);
+    color:#fff;
+    z-index:2000;
+    padding:30px;
+    transition:right .35s ease;
+    overflow-y:auto;
+    box-shadow:-15px 0 50px rgba(0,0,0,.18);
+}
+
+.side-menu.open{
+    right:0;
+}
+
+.close-menu{
+    margin-left:auto;
+    width:42px;
+    height:42px;
+    border:1px solid rgba(255,255,255,.3);
+    border-radius:50%;
+    background:transparent;
+    color:white;
+    cursor:pointer;
+    font-size:22px;
+}
+
+.side-menu nav{
+    margin-top:45px;
+}
+
+.side-menu nav a,
+.menu-parent{
+    display:block;
+    padding:14px 0;
+    border-bottom:1px solid rgba(255,255,255,.13);
+    font-size:16px;
+    cursor:pointer;
+}
+
+.submenu{
+    display:none;
+    padding:4px 0 10px 15px;
+}
+
+.submenu.open{
+    display:block;
+}
+
+.submenu a{
+    border:0;
+    padding:9px 0;
+    color:#d9e5dc;
+    font-size:14px;
+}
+
+.overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.38);
+    z-index:1500;
+    display:none;
+}
+
+.overlay.show{
+    display:block;
+}
+
+/* HERO */
+
+.hero{
+    min-height:680px;
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
+    align-items:center;
+    gap:50px;
+    max-width:1240px;
+    margin:auto;
+    padding:85px 25px;
+}
+
+.hero-content{
+    max-width:650px;
+}
+
+.eyebrow{
+    color:var(--green2);
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-size:12px;
+    font-weight:800;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-family:Georgia,serif;
+    font-size:clamp(45px,6vw,78px);
+    line-height:1.03;
+    font-weight:500;
+    letter-spacing:-2px;
+    margin-bottom:25px;
+}
+
+.hero h1 em{
+    color:var(--green2);
+}
+
+.hero p{
+    max-width:570px;
+    color:var(--muted);
+    font-size:17px;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.hero-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.btn{
+    border:0;
+    padding:15px 25px;
+    border-radius:4px;
+    cursor:pointer;
+    font-weight:700;
+    transition:.25s;
+}
+
+.btn-green{
+    background:var(--green);
+    color:white;
+}
+
+.btn-green:hover{
+    background:var(--green2);
+    transform:translateY(-2px);
+}
+
+.btn-outline{
+    border:1px solid var(--green);
+    background:transparent;
+    color:var(--green);
+}
+
+.btn-outline:hover{
+    background:var(--green);
+    color:white;
+}
+
+.hero-art{
+    min-height:480px;
+    border-radius:12px;
+    overflow:hidden;
+    position:relative;
+    background:
+        linear-gradient(rgba(23,63,50,.18),rgba(23,63,50,.18)),
+        url("https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1000&q=85")
+        center/cover;
+}
+
+.hero-art-card{
+    position:absolute;
+    left:25px;
+    bottom:25px;
+    max-width:300px;
+    background:rgba(255,253,248,.94);
+    padding:22px;
+    border-radius:6px;
+}
+
+.hero-art-card strong{
+    display:block;
+    font-family:Georgia,serif;
+    font-size:23px;
+    margin-bottom:7px;
+}
+
+.hero-art-card span{
+    color:var(--muted);
+    font-size:13px;
+}
+
+/* SECTION */
+
+.section{
+    max-width:1240px;
+    margin:auto;
+    padding:95px 25px;
+}
+
+.section-head{
+    max-width:700px;
+    margin-bottom:45px;
+}
+
+.section-label{
+    color:var(--green2);
+    text-transform:uppercase;
+    font-size:11px;
+    letter-spacing:2px;
+    font-weight:800;
+    margin-bottom:12px;
+}
+
+.section h2{
+    font-family:Georgia,serif;
+    font-weight:500;
+    font-size:clamp(34px,5vw,56px);
+    line-height:1.1;
+    margin-bottom:18px;
+}
+
+.section-head p{
+    color:var(--muted);
+    line-height:1.8;
+}
+
+/* SERVICES */
+
+.services{
+    background:var(--white);
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.service-card{
+    min-height:250px;
+    padding:30px;
+    border:1px solid var(--border);
+    background:var(--cream);
+    transition:.25s;
+}
+
+.service-card:hover{
+    transform:translateY(-5px);
+    border-color:var(--green);
+}
+
+.service-icon{
+    font-size:30px;
+    margin-bottom:28px;
+}
+
+.service-card h3{
+    font-family:Georgia,serif;
+    font-size:25px;
+    font-weight:500;
+    margin-bottom:12px;
+}
+
+.service-card p{
+    color:var(--muted);
+    line-height:1.7;
+    font-size:14px;
+}
+
+.service-link{
+    display:inline-block;
+    margin-top:20px;
+    color:var(--green);
+    font-size:13px;
+    font-weight:800;
+}
+
+/* GREEN CTA */
+
+.green-cta{
+    background:var(--green);
+    color:white;
+}
+
+.cta-inner{
+    max-width:1240px;
+    margin:auto;
+    padding:90px 25px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:40px;
+}
+
+.cta-inner h2{
+    font-family:Georgia,serif;
+    font-size:clamp(35px,5vw,58px);
+    font-weight:500;
+    max-width:700px;
+}
+
+.cta-inner p{
+    color:#d7e2da;
+    margin-top:15px;
+    line-height:1.7;
+    max-width:620px;
+}
+
+.btn-orange{
+    background:var(--orange);
+    color:white;
+    white-space:nowrap;
+}
+
+.btn-orange:hover{
+    filter:brightness(1.08);
+    transform:translateY(-2px);
+}
+
+/* BOOKS */
+
+.books{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.book{
+    background:var(--white);
+    border:1px solid var(--border);
+    padding:14px;
+}
+
+.book-cover{
+    height:330px;
+    overflow:hidden;
+    background:var(--cream2);
+}
+
+.book-cover img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.book:hover img{
+    transform:scale(1.04);
+}
+
+.book-info{
+    padding:18px 4px 7px;
+}
+
+.book-info h3{
+    font-family:Georgia,serif;
+    font-weight:500;
+    font-size:19px;
+    margin-bottom:6px;
+}
+
+.book-info p{
+    color:var(--muted);
+    font-size:12px;
+}
+
+/* STATS */
+
+.stats-section{
+    background:var(--cream2);
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:1px;
+    background:var(--border);
+    border:1px solid var(--border);
+}
+
+.stat{
+    background:var(--cream);
+    padding:40px 25px;
+    text-align:center;
+}
+
+.stat strong{
+    display:block;
+    font-family:Georgia,serif;
+    font-size:45px;
+    font-weight:500;
+    color:var(--green);
+}
+
+.stat span{
+    color:var(--muted);
+    font-size:13px;
+}
+
+/* WHY */
+
+.why-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.why-image{
+    height:520px;
+    border-radius:10px;
+    background:url("https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=1000&q=85")
+    center/cover;
+}
+
+.features{
+    display:grid;
+    gap:15px;
+}
+
+.feature{
+    padding:22px;
+    border-bottom:1px solid var(--border);
+}
+
+.feature strong{
+    font-family:Georgia,serif;
+    font-size:21px;
+    font-weight:500;
+}
+
+.feature p{
+    color:var(--muted);
+    margin-top:8px;
+    line-height:1.6;
+    font-size:14px;
+}
+
+/* STORIES */
+
+.story-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.story{
+    background:var(--white);
+    border:1px solid var(--border);
+    padding:25px;
+}
+
+.story-image{
+    height:220px;
+    margin:-25px -25px 22px;
+    background-size:cover;
+    background-position:center;
+}
+
+.story:nth-child(1) .story-image{
+    background-image:url("https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=800&q=80");
+}
+
+.story:nth-child(2) .story-image{
+    background-image:url("https://images.unsplash.com/photo-1456324504439-367cee3b3c32?auto=format&fit=crop&w=800&q=80");
+}
+
+.story:nth-child(3) .story-image{
+    background-image:url("https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=800&q=80");
+}
+
+.story small{
+    color:var(--green2);
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.story h3{
+    font-family:Georgia,serif;
+    font-weight:500;
+    font-size:24px;
+    margin:10px 0;
+}
+
+.story p{
+    color:var(--muted);
+    line-height:1.7;
+    font-size:14px;
+}
+
+/* FAQ */
+
+.faq{
+    max-width:850px;
+    margin:auto;
+}
+
+.faq-item{
+    border-bottom:1px solid var(--border);
+}
+
+.faq-question{
+    width:100%;
+    border:0;
+    background:transparent;
+    padding:22px 0;
+    text-align:left;
+    color:var(--green);
+    font-family:Georgia,serif;
+    font-size:19px;
+    display:flex;
+    justify-content:space-between;
+    cursor:pointer;
+}
+
+.faq-answer{
+    display:none;
+    color:var(--muted);
+    line-height:1.7;
+    padding:0 35px 22px 0;
+    font-size:14px;
+}
+
+.faq-item.active .faq-answer{
+    display:block;
+}
+
+/* CONTACT */
+
+.contact{
+    background:var(--white);
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    gap:50px;
+}
+
+.contact-details{
+    background:var(--green);
+    color:white;
+    padding:38px;
+    border-radius:8px;
+}
+
+.contact-details h3{
+    font-family:Georgia,serif;
+    font-size:31px;
+    font-weight:500;
+    margin-bottom:25px;
+}
+
+.contact-item{
+    padding:17px 0;
+    border-bottom:1px solid rgba(255,255,255,.15);
+}
+
+.contact-item strong{
+    display:block;
+    margin-bottom:5px;
+}
+
+.contact-item span{
+    color:#d2ded6;
+    font-size:13px;
+}
+
+.contact-form{
+    display:grid;
+    gap:16px;
+}
+
+.form-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+}
+
+input,
+textarea{
+    width:100%;
+    padding:15px;
+    border:1px solid var(--border);
+    background:var(--cream);
+    color:var(--text);
+    outline:none;
+    border-radius:3px;
+}
+
+textarea{
+    min-height:150px;
+    resize:vertical;
+}
+
+input:focus,
+textarea:focus{
+    border-color:var(--green);
+}
+
+/* FOOTER */
+
+footer{
+    background:#102e25;
+    color:white;
+}
+
+.footer-inner{
+    max-width:1240px;
+    margin:auto;
+    padding:70px 25px 30px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:1.5fr 1fr 1fr 1fr;
+    gap:40px;
+}
+
+.footer-logo{
+    font-family:Georgia,serif;
+    font-size:25px;
+    margin-bottom:15px;
+}
+
+.footer p{
+    color:#b9c9c0;
+    line-height:1.7;
+    font-size:13px;
+    max-width:350px;
+}
+
+.footer h4{
+    margin-bottom:17px;
+}
+
+.footer a{
+    display:block;
+    color:#b9c9c0;
+    font-size:13px;
+    margin:11px 0;
+}
+
+.footer a:hover{
+    color:white;
+}
+
+.copyright{
+    margin-top:50px;
+    padding-top:20px;
+    border-top:1px solid rgba(255,255,255,.12);
+    color:#9fb1a7;
+    font-size:12px;
+    display:flex;
+    justify-content:space-between;
+    gap:15px;
+}
+
+/* FLOATING CHAT */
+
+.chat{
+    position:fixed;
+    right:22px;
+    bottom:22px;
+    width:58px;
+    height:58px;
+    border:0;
+    border-radius:50%;
+    background:var(--green);
+    color:white;
+    font-size:24px;
+    cursor:pointer;
+    box-shadow:0 10px 30px rgba(23,63,50,.35);
+    z-index:900;
+}
+
+.chat:hover{
+    background:var(--green2);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1000px){
+
+    .hero{
+        grid-template-columns:1fr;
+        padding-top:60px;
+    }
+
+    .hero-art{
+        min-height:420px;
+    }
+
+    .books{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .service-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .why-grid{
+        grid-template-columns:1fr;
+    }
+
+    .why-image{
+        height:400px;
+    }
+
+    .story-grid{
+        grid-template-columns:1fr;
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:600px){
+
+    .nav{
+        height:70px;
+        padding:0 16px;
+    }
+
+    .logo{
+        font-size:16px;
+    }
+
+    .logo-mark{
+        width:38px;
+        height:38px;
+    }
+
+    .hero{
+        padding:55px 18px;
+        min-height:auto;
+    }
+
+    .hero h1{
+        letter-spacing:-1px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .hero-art{
+        min-height:360px;
+    }
+
+    .section{
+        padding:65px 18px;
+    }
+
+    .service-grid,
+    .books{
+        grid-template-columns:1fr;
+    }
+
+    .book-cover{
+        height:400px;
+    }
+
+    .stats{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .stat{
+        padding:28px 12px;
+    }
+
+    .stat strong{
+        font-size:34px;
+    }
+
+    .cta-inner{
+        padding:65px 18px;
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .form-row{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .copyright{
+        flex-direction:column;
+    }
+
+    .side-menu{
+        width:88vw;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="nav">
+
+        <a href="#" class="logo">
+            <div class="logo-mark">✦</div>
+            <span>Angel Pine Publishing</span>
+        </a>
+
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+    </div>
+</header>
+
+<!-- SIDE MENU -->
+<div class="overlay" id="overlay"></div>
+
+<aside class="side-menu" id="sideMenu">
+
+    <button class="close-menu" id="closeMenu">×</button>
+
+    <nav>
+
+        <a href="#home" class="menu-link">Home</a>
+
+        <div class="menu-parent" data-sub="ghost">
+            Ghostwriting & Editing +
+        </div>
+
+        <div class="submenu" id="ghost">
+            <a href="#services">Ghostwriting</a>
+            <a href="#services">Editing & Proofreading</a>
+            <a href="#services">Book Writing</a>
+            <a href="#services">Author Support</a>
+        </div>
+
+        <div class="menu-parent" data-sub="publish">
+            Publishing +
+        </div>
+
+        <div class="submenu" id="publish">
+            <a href="#services">Book Publishing</a>
+            <a href="#books">Published Works</a>
+            <a href="#contact">Publishing Consultation</a>
+        </div>
+
+        <a href="#services" class="menu-link">Marketing</a>
+        <a href="#services" class="menu-link">Designing</a>
+        <a href="#contact" class="menu-link">Hire a Writer</a>
+        <a href="#contact" class="menu-link">Contact</a>
+
+    </nav>
+
+</aside>
+
+<!-- HERO -->
+<main id="home">
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="eyebrow">
+            Your Story. Your Legacy.
+        </div>
+
+        <h1>
+            Bring your <em>story</em> to life.
+        </h1>
+
+        <p>
+            From the first idea to a finished book, Angel Pine Publishing
+            helps authors transform their words into polished, professional
+            publications ready to reach readers.
+        </p>
+
+        <div class="hero-actions">
+            <a href="#contact" class="btn btn-green">
+                Get Started
+            </a>
+
+            <a href="#services" class="btn btn-outline">
+                Explore Services
+            </a>
+        </div>
+
+    </div>
+
+    <div class="hero-art">
+
+        <div class="hero-art-card">
+            <strong>Every great book starts with an idea.</strong>
+            <span>
+                We help turn that idea into something readers remember.
+            </span>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SERVICES -->
+<section class="section services" id="services">
+
+    <div class="section-head">
+
+        <div class="section-label">
+            What We Do
+        </div>
+
+        <h2>
+            Everything your book needs, under one roof.
+        </h2>
+
+        <p>
+            Professional support for writers, authors and businesses
+            at every stage of the publishing journey.
+        </p>
+
+    </div>
+
+    <div class="service-grid">
+
+        <article class="service-card">
+            <div class="service-icon">✍</div>
+            <h3>Ghostwriting</h3>
+            <p>
+                Turn your ideas, experiences and expertise into a compelling,
+                professionally written manuscript.
+            </p>
+            <a href="#contact" class="service-link">Learn More →</a>
+        </article>
+
+        <article class="service-card">
+            <div class="service-icon">✓</div>
+            <h3>Editing</h3>
+            <p>
+                Refine your manuscript with professional editing,
+                proofreading and editorial guidance.
+            </p>
+            <a href="#contact" class="service-link">Learn More →</a>
+        </article>
+
+        <article class="service-card">
+            <div class="service-icon">▣</div>
+            <h3>Publishing</h3>
+            <p>
+                Prepare your book for publication with a complete,
+                professional publishing process.
+            </p>
+            <a href="#contact" class="service-link">Learn More →</a>
+        </article>
+
+        <article class="service-card">
+            <div class="service-icon">◇</div>
+            <h3>Book Design</h3>
+            <p>
+                Create memorable covers and interiors that give your
+                book a polished professional appearance.
+            </p>
+            <a href="#contact" class="service-link">Learn More →</a>
+        </article>
+
+        <article class="service-card">
+            <div class="service-icon">◎</div>
+            <h3>Marketing</h3>
+            <p>
+                Build awareness around your book and connect it with
+                the right readers.
+            </p>
+            <a href="#contact" class="service-link">Learn More →</a>
+        </article>
+
+        <article class="service-card">
+            <div class="service-icon">★</div>
+            <h3>Author Support</h3>
+            <p>
+                Get professional guidance from concept development
+                through launch and beyond.
+            </p>
+            <a href="#contact" class="service-link">Learn More →</a>
+        </article>
+
+    </div>
+
+</section>
+
+<!-- CTA -->
+<section class="green-cta">
+
+    <div class="cta-inner">
+
+        <div>
+            <h2>
+                Have a story waiting to be told?
+            </h2>
+
+            <p>
+                Tell us about your project and discover how we can
+                help bring it to life.
+            </p>
+        </div>
+
+        <a href="#contact" class="btn btn-orange">
+            Request a Quote
+        </a>
+
+    </div>
+
+</section>
+
+<!-- BOOKS -->
+<section class="section" id="books">
+
+    <div class="section-head">
+
+        <div class="section-label">
+            Published Works
+        </div>
+
+        <h2>
+            Stories worth sharing.
+        </h2>
+
+        <p>
+            Explore a selection of books and projects created with
+            authors through the publishing journey.
+        </p>
+
+    </div>
+
+    <div class="books">
+
+        <article class="book">
+            <div class="book-cover">
+                <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=700&q=85" alt="Published book">
+            </div>
+            <div class="book-info">
+                <h3>The Story Within</h3>
+                <p>Featured Publication</p>
+            </div>
+        </article>
+
+        <article class="book">
+            <div class="book-cover">
+                <img src="https://images.unsplash.com/photo-1511108690759-009324a90311?auto=format&fit=crop&w=700&q=85" alt="Published book">
+            </div>
+            <div class="book-info">
+                <h3>New Beginnings</h3>
+                <p>Featured Publication</p>
+            </div>
+        </article>
+
+        <article class="book">
+            <div class="book-cover">
+                <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=700&q=85" alt="Published book">
+            </div>
+            <div class="book-info">
+                <h3>Beyond the Pages</h3>
+                <p>Featured Publication</p>
+            </div>
+        </article>
+
+        <article class="book">
+            <div class="book-cover">
+                <img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=700&q=85" alt="Published book">
+            </div>
+            <div class="book-info">
+                <h3>Words That Matter</h3>
+                <p>Featured Publication</p>
+            </div>
+        </article>
+
+    </div>
+
+</section>
+
+<!-- STATS -->
+<section class="stats-section">
+
+    <div class="section">
+
+        <div class="stats">
+
+            <div class="stat">
+                <strong>10+</strong>
+                <span>Years of Experience</span>
+            </div>
+
+            <div class="stat">
+                <strong>500+</strong>
+                <span>Books Supported</span>
+            </div>
+
+            <div class="stat">
+                <strong>30+</strong>
+                <span>Publishing Experts</span>
+            </div>
+
+            <div class="stat">
+                <strong>98%</strong>
+                <span>Client Satisfaction</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- WHY -->
+<section class="section">
+
+    <div class="why-grid">
+
+        <div class="why-image"></div>
+
+        <div>
+
+            <div class="section-label">
+                Why Angel Pine
+            </div>
+
+            <h2>
+                Your vision stays at the heart of everything we do.
+            </h2>
+
+            <div class="features">
+
+                <div class="feature">
+                    <strong>Professional Quality</strong>
+                    <p>
+                        Experienced professionals working carefully
+                        on every part of your project.
+                    </p>
+                </div>
+
+                <div class="feature">
+                    <strong>Personal Guidance</strong>
+                    <p>
+                        Clear communication and support throughout
+                        your publishing journey.
+                    </p>
+                </div>
+
+                <div class="feature">
+                    <strong>Complete Services</strong>
+                    <p>
+                        Writing, editing, design, publishing and marketing
+                        support in one place.
+                    </p>
+                </div>
+
+                <div class="feature">
+                    <strong>Author First</strong>
+                    <p>
+                        Your goals, your voice and your story remain
+                        at the center of the process.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- STORIES -->
+<section class="section" style="background:var(--white);max-width:none;">
+
+    <div style="max-width:1240px;margin:auto;">
+
+        <div class="section-head">
+
+            <div class="section-label">
+                Expert Stories
+            </div>
+
+            <h2>
+                Ideas, advice and inspiration.
+            </h2>
+
+        </div>
+
+        <div class="story-grid">
+
+            <article class="story">
+                <div class="story-image"></div>
+                <small>Writing</small>
+                <h3>Finding your author's voice</h3>
+                <p>
+                    Practical ideas to help develop a clear and memorable
+                    writing voice.
+                </p>
+            </article>
+
+            <article class="story">
+                <div class="story-image"></div>
+                <small>Publishing</small>
+                <h3>From manuscript to book</h3>
+                <p>
+                    Understand the important stages between completing
+                    your manuscript and publishing.
+                </p>
+            </article>
+
+            <article class="story">
+                <div class="story-image"></div>
+                <small>Authors</small>
+                <h3>Building your author journey</h3>
+                <p>
+                    Simple ways authors can prepare for a successful
+                    publishing experience.
+                </p>
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FAQ -->
+<section class="section">
+
+    <div class="section-head">
+
+        <div class="section-label">
+            FAQ
+        </div>
+
+        <h2>
+            Frequently asked questions.
+        </h2>
+
+    </div>
+
+    <div class="faq">
+
+        <div class="faq-item">
+            <button class="faq-question">
+                What services do you provide?
+                <span>+</span>
+            </button>
+            <div class="faq-answer">
+                We provide writing, editing, publishing, design,
+                marketing and author-support services.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Can you help with an unfinished manuscript?
+                <span>+</span>
+            </button>
+            <div class="faq-answer">
+                Yes. We can discuss your existing material and recommend
+                the right service for your project.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                How do I get started?
+                <span>+</span>
+            </button>
+            <div class="faq-answer">
+                Send us your project details through the contact form
+                and our team can discuss the next steps with you.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Do you work with new authors?
+                <span>+</span>
+            </button>
+            <div class="faq-answer">
+                Absolutely. We support both first-time authors and
+                experienced writers.
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+    <div class="section">
+
+        <div class="section-head">
+
+            <div class="section-label">
+                Get In Touch
+            </div>
+
+            <h2>
+                Let's talk about your book.
+            </h2>
+
+            <p>
+                Tell us a little about your project and our team
+                will help you decide what comes next.
+            </p>
+
+        </div>
+
+        <div class="contact-grid">
+
+            <div class="contact-details">
+
+                <h3>Angel Pine Publishing</h3>
+
+                <div class="contact-item">
+                    <strong>Email</strong>
+                    <span>hello@angelpinepublishing.com</span>
+                </div>
+
+                <div class="contact-item">
+                    <strong>Phone</strong>
+                    <span>Contact our publishing team</span>
+                </div>
+
+                <div class="contact-item">
+                    <strong>Hours</strong>
+                    <span>Monday – Friday</span>
+                </div>
+
+                <div class="contact-item">
+                    <strong>Consultation</strong>
+                    <span>Available by appointment</span>
+                </div>
+
+            </div>
+
+            <form class="contact-form" id="contactForm">
+
+                <div class="form-row">
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Your Name"
+                        required>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Your Email"
+                        required>
+
+                </div>
+
+                <input
+                    type="text"
+                    id="project"
+                    placeholder="What can we help you with?">
+
+                <textarea
+                    id="message"
+                    placeholder="Tell us about your project..."
+                    required></textarea>
+
+                <button class="btn btn-green" type="submit">
+                    Send Inquiry
+                </button>
+
+                <p id="formMessage" style="color:var(--green);font-size:13px;"></p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+
+    <div class="footer-inner">
+
+        <div class="footer-grid">
+
+            <div>
+                <div class="footer-logo">
+                    Angel Pine Publishing
+                </div>
+
+                <p>
+                    Helping authors transform ideas into polished,
+                    professional books ready for readers.
+                </p>
+            </div>
+
+            <div>
+                <h4>Services</h4>
+                <a href="#services">Ghostwriting</a>
+                <a href="#services">Editing</a>
+                <a href="#services">Publishing</a>
+                <a href="#services">Design</a>
+            </div>
+
+            <div>
+                <h4>Company</h4>
+                <a href="#home">About Us</a>
+                <a href="#books">Published Works</a>
+                <a href="#home">Our Team</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <div>
+                <h4>Get Started</h4>
+                <a href="#contact">Request a Quote</a>
+                <a href="#contact">Hire a Writer</a>
+                <a href="#contact">Consultation</a>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            <span>© 2026 Angel Pine Publishing. All rights reserved.</span>
+            <span>Professional Publishing Services</span>
+        </div>
+
+    </div>
+
+</footer>
+
+<!-- CHAT -->
+<button class="chat" id="chatBtn" aria-label="Contact">
+    💬
+</button>
+
+<script>
+
+/* MENU */
+
+const menuBtn =
+    document.getElementById("menuBtn");
+
+const closeMenu =
+    document.getElementById("closeMenu");
+
+const sideMenu =
+    document.getElementById("sideMenu");
+
+const overlay =
+    document.getElementById("overlay");
+
+function openMenu(){
+    sideMenu.classList.add("open");
+    overlay.classList.add("show");
+}
+
+function closeSideMenu(){
+    sideMenu.classList.remove("open");
+    overlay.classList.remove("show");
+}
+
+menuBtn.addEventListener("click",openMenu);
+closeMenu.addEventListener("click",closeSideMenu);
+overlay.addEventListener("click",closeSideMenu);
+
+document
+.querySelectorAll(".menu-link")
+.forEach(link=>{
+    link.addEventListener("click",closeSideMenu);
+});
+
+/* SUBMENUS */
+
+document
+.querySelectorAll(".menu-parent")
+.forEach(parent=>{
+
+    parent.addEventListener("click",()=>{
+
+        const id =
+            parent.getAttribute("data-sub");
+
+        const submenu =
+            document.getElementById(id);
+
+        submenu.classList.toggle("open");
+
+    });
+
+});
+
+/* FAQ */
+
+document
+.querySelectorAll(".faq-question")
+.forEach(button=>{
+
+    button.addEventListener("click",()=>{
+
+        const item =
+            button.parentElement;
+
+        const isActive =
+            item.classList.contains("active");
+
+        document
+        .querySelectorAll(".faq-item")
+        .forEach(other=>{
+            other.classList.remove("active");
+            other
+            .querySelector(".faq-question span")
+            .textContent="+";
+        });
+
+        if(!isActive){
+
+            item.classList.add("active");
+
+            button
+            .querySelector("span")
+            .textContent="−";
+
+        }
+
+    });
+
+});
+
+/* CONTACT FORM */
+
+document
+.getElementById("contactForm")
+.addEventListener("submit",function(e){
+
+    e.preventDefault();
+
+    const name =
+        document.getElementById("name").value.trim();
+
+    const email =
+        document.getElementById("email").value.trim();
+
+    const message =
+        document.getElementById("message").value.trim();
+
+    const formMessage =
+        document.getElementById("formMessage");
+
+    if(!name || !email || !message){
+
+        formMessage.textContent =
+            "Please complete the required fields.";
+
+        return;
+    }
+
+    formMessage.textContent =
+        "Thank you. Your inquiry is ready to be submitted.";
+
+    this.reset();
+
+});
+
+/* CHAT BUTTON */
+
+document
+.getElementById("chatBtn")
+.addEventListener("click",()=>{
+
+    document
+    .getElementById("contact")
+    .scrollIntoView({
+        behavior:"smooth"
+    });
+
+});
+
+</script>
+
+</body>
+</html>
+```
