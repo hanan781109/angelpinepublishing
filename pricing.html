@@ -1,0 +1,294 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing - Angel Pine Publishing</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f7f5ef;
+    color:#2d3a32;
+}
+
+a{
+    text-decoration:none;
+}
+
+/* Header */
+
+header{
+    background:#fff;
+    border-bottom:1px solid #e5dfd4;
+    padding:20px 50px;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#2d3a32;
+}
+
+.logo span{
+    color:#b68b58;
+}
+
+.menu{
+    display:flex;
+    gap:25px;
+}
+
+.menu a{
+    color:#2d3a32;
+    font-size:14px;
+}
+
+.contact-btn{
+    background:#2d3a32;
+    color:white !important;
+    padding:12px 20px;
+    border-radius:5px;
+}
+
+/* Hero */
+
+.hero{
+    text-align:center;
+    padding:90px 20px;
+}
+
+.hero h1{
+    font-size:55px;
+    color:#2d3a32;
+}
+
+.hero span{
+    color:#b68b58;
+}
+
+.hero p{
+    max-width:700px;
+    margin:20px auto;
+    color:#666;
+    line-height:1.8;
+}
+
+/* Pricing */
+
+.pricing{
+    max-width:1200px;
+    margin:auto;
+    padding:40px 20px 100px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border:1px solid #e4ddd2;
+    padding:35px;
+    text-align:center;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    transition:0.3s;
+}
+
+.featured{
+    border:2px solid #b68b58;
+}
+
+.card h2{
+    font-size:28px;
+    margin-bottom:20px;
+}
+
+.price{
+    font-size:50px;
+    color:#b68b58;
+    margin-bottom:25px;
+}
+
+.card ul{
+    list-style:none;
+    text-align:left;
+    margin-bottom:30px;
+}
+
+.card ul li{
+    margin-bottom:12px;
+    color:#666;
+}
+
+.btn{
+    display:inline-block;
+    background:#2d3a32;
+    color:white;
+    padding:14px 28px;
+}
+
+/* Footer */
+
+footer{
+    background:#1b241f;
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+}
+
+@media(max-width:900px){
+
+.cards{
+grid-template-columns:1fr;
+}
+
+nav{
+flex-direction:column;
+gap:20px;
+}
+
+.menu{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.hero h1{
+font-size:40px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<nav>
+
+<div class="logo">
+Angel Pine <span>Publishing</span>
+</div>
+
+<div class="menu">
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="pricing.html">Pricing</a>
+<a href="contact.html">Contact</a>
+<a href="contact.html" class="contact-btn">Book Consultation</a>
+</div>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>Our <span>Pricing</span></h1>
+
+<p>
+Choose the package that best fits your publishing needs.
+Custom packages are also available.
+</p>
+
+</section>
+
+<section class="pricing">
+
+<div class="cards">
+
+<div class="card">
+
+<h2>Starter</h2>
+
+<div class="price">$499</div>
+
+<ul>
+<li>✔ Book Consultation</li>
+<li>✔ Basic Editing</li>
+<li>✔ Formatting</li>
+<li>✔ Publishing Guidance</li>
+</ul>
+
+<a href="contact.html" class="btn">
+Get Started
+</a>
+
+</div>
+
+<div class="card featured">
+
+<h2>Professional</h2>
+
+<div class="price">$999</div>
+
+<ul>
+<li>✔ Professional Editing</li>
+<li>✔ Book Cover Design</li>
+<li>✔ eBook Formatting</li>
+<li>✔ Publishing Setup</li>
+<li>✔ Author Support</li>
+</ul>
+
+<a href="contact.html" class="btn">
+Choose Plan
+</a>
+
+</div>
+
+<div class="card">
+
+<h2>Premium</h2>
+
+<div class="price">$1999</div>
+
+<ul>
+<li>✔ Ghostwriting</li>
+<li>✔ Premium Design</li>
+<li>✔ Publishing</li>
+<li>✔ Marketing Support</li>
+<li>✔ Dedicated Manager</li>
+</ul>
+
+<a href="contact.html" class="btn">
+Start Now
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+© 2026 Angel Pine Publishing. All Rights Reserved.
+</p>
+
+</footer>
+
+</body>
+</html>
+```
