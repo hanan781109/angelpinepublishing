@@ -14,7 +14,6 @@
     --cream2:#eee7d8;
     --green:#173f32;
     --green2:#245a48;
-    --light-green:#dfe9df;
     --white:#fffdf8;
     --text:#17352d;
     --muted:#66736b;
@@ -44,21 +43,18 @@ a{
     text-decoration:none;
 }
 
-button,
-input,
-textarea{
+button,input,textarea{
     font:inherit;
 }
 
 /* HEADER */
-
 header{
     position:sticky;
     top:0;
     z-index:1000;
-    background:rgba(246,241,231,.94);
-    backdrop-filter:blur(14px);
-    border-bottom:1px solid rgba(23,63,50,.10);
+    background:rgba(246,241,231,.96);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(23,63,50,.1);
 }
 
 .nav{
@@ -78,7 +74,6 @@ header{
     font-family:Georgia,serif;
     font-size:20px;
     font-weight:700;
-    letter-spacing:.2px;
 }
 
 .logo-mark{
@@ -111,11 +106,9 @@ header{
     width:20px;
     height:2px;
     background:var(--green);
-    transition:.25s;
 }
 
 /* SIDE MENU */
-
 .side-menu{
     position:fixed;
     top:0;
@@ -189,7 +182,6 @@ header{
 }
 
 /* HERO */
-
 .hero{
     min-height:680px;
     display:grid;
@@ -248,6 +240,7 @@ header{
     cursor:pointer;
     font-weight:700;
     transition:.25s;
+    display:inline-block;
 }
 
 .btn-green{
@@ -277,9 +270,8 @@ header{
     overflow:hidden;
     position:relative;
     background:
-        linear-gradient(rgba(23,63,50,.18),rgba(23,63,50,.18)),
-        url("https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1000&q=85")
-        center/cover;
+        linear-gradient(rgba(23,63,50,.15),rgba(23,63,50,.15)),
+        url("images/hero.jpg") center/cover no-repeat;
 }
 
 .hero-art-card{
@@ -287,7 +279,7 @@ header{
     left:25px;
     bottom:25px;
     max-width:300px;
-    background:rgba(255,253,248,.94);
+    background:rgba(255,253,248,.95);
     padding:22px;
     border-radius:6px;
 }
@@ -304,8 +296,7 @@ header{
     font-size:13px;
 }
 
-/* SECTION */
-
+/* SECTIONS */
 .section{
     max-width:1240px;
     margin:auto;
@@ -340,7 +331,6 @@ header{
 }
 
 /* SERVICES */
-
 .services{
     background:var(--white);
 }
@@ -390,8 +380,7 @@ header{
     font-weight:800;
 }
 
-/* GREEN CTA */
-
+/* CTA */
 .green-cta{
     background:var(--green);
     color:white;
@@ -427,13 +416,7 @@ header{
     white-space:nowrap;
 }
 
-.btn-orange:hover{
-    filter:brightness(1.08);
-    transform:translateY(-2px);
-}
-
 /* BOOKS */
-
 .books{
     display:grid;
     grid-template-columns:repeat(4,1fr);
@@ -444,6 +427,12 @@ header{
     background:var(--white);
     border:1px solid var(--border);
     padding:14px;
+    transition:.25s;
+}
+
+.book:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(23,63,50,.12);
 }
 
 .book-cover{
@@ -456,6 +445,7 @@ header{
     width:100%;
     height:100%;
     object-fit:cover;
+    display:block;
     transition:.4s;
 }
 
@@ -480,7 +470,6 @@ header{
 }
 
 /* STATS */
-
 .stats-section{
     background:var(--cream2);
 }
@@ -513,7 +502,6 @@ header{
 }
 
 /* WHY */
-
 .why-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
@@ -524,8 +512,7 @@ header{
 .why-image{
     height:520px;
     border-radius:10px;
-    background:url("https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=1000&q=85")
-    center/cover;
+    background:url("images/why.jpg") center/cover no-repeat;
 }
 
 .features{
@@ -552,7 +539,6 @@ header{
 }
 
 /* STORIES */
-
 .story-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
@@ -573,15 +559,15 @@ header{
 }
 
 .story:nth-child(1) .story-image{
-    background-image:url("https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=800&q=80");
+    background-image:url("images/story1.jpg");
 }
 
 .story:nth-child(2) .story-image{
-    background-image:url("https://images.unsplash.com/photo-1456324504439-367cee3b3c32?auto=format&fit=crop&w=800&q=80");
+    background-image:url("images/story2.jpg");
 }
 
 .story:nth-child(3) .story-image{
-    background-image:url("https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=800&q=80");
+    background-image:url("images/story3.jpg");
 }
 
 .story small{
@@ -604,7 +590,6 @@ header{
 }
 
 /* FAQ */
-
 .faq{
     max-width:850px;
     margin:auto;
@@ -641,7 +626,6 @@ header{
 }
 
 /* CONTACT */
-
 .contact{
     background:var(--white);
 }
@@ -692,8 +676,7 @@ header{
     gap:16px;
 }
 
-input,
-textarea{
+input,textarea{
     width:100%;
     padding:15px;
     border:1px solid var(--border);
@@ -708,13 +691,11 @@ textarea{
     resize:vertical;
 }
 
-input:focus,
-textarea:focus{
+input:focus,textarea:focus{
     border-color:var(--green);
 }
 
 /* FOOTER */
-
 footer{
     background:#102e25;
     color:white;
@@ -738,7 +719,7 @@ footer{
     margin-bottom:15px;
 }
 
-.footer p{
+.footer-grid p{
     color:#b9c9c0;
     line-height:1.7;
     font-size:13px;
@@ -749,14 +730,14 @@ footer{
     margin-bottom:17px;
 }
 
-.footer a{
+.footer-grid a{
     display:block;
     color:#b9c9c0;
     font-size:13px;
     margin:11px 0;
 }
 
-.footer a:hover{
+.footer-grid a:hover{
     color:white;
 }
 
@@ -771,8 +752,7 @@ footer{
     gap:15px;
 }
 
-/* FLOATING CHAT */
-
+/* CHAT */
 .chat{
     position:fixed;
     right:22px;
@@ -789,12 +769,7 @@ footer{
     z-index:900;
 }
 
-.chat:hover{
-    background:var(--green2);
-}
-
 /* RESPONSIVE */
-
 @media(max-width:1000px){
 
     .hero{
@@ -914,21 +889,15 @@ footer{
     .copyright{
         flex-direction:column;
     }
-
-    .side-menu{
-        width:88vw;
-    }
 }
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header>
     <div class="nav">
-
-        <a href="#" class="logo">
+        <a href="#home" class="logo">
             <div class="logo-mark">✦</div>
             <span>Angel Pine Publishing</span>
         </a>
@@ -938,19 +907,15 @@ footer{
             <span></span>
             <span></span>
         </button>
-
     </div>
 </header>
 
-<!-- SIDE MENU -->
 <div class="overlay" id="overlay"></div>
 
 <aside class="side-menu" id="sideMenu">
-
     <button class="close-menu" id="closeMenu">×</button>
 
     <nav>
-
         <a href="#home" class="menu-link">Home</a>
 
         <div class="menu-parent" data-sub="ghost">
@@ -978,14 +943,12 @@ footer{
         <a href="#services" class="menu-link">Designing</a>
         <a href="#contact" class="menu-link">Hire a Writer</a>
         <a href="#contact" class="menu-link">Contact</a>
-
     </nav>
-
 </aside>
 
-<!-- HERO -->
 <main id="home">
 
+<!-- HERO -->
 <section class="hero">
 
     <div class="hero-content">
@@ -1017,14 +980,12 @@ footer{
     </div>
 
     <div class="hero-art">
-
         <div class="hero-art-card">
             <strong>Every great book starts with an idea.</strong>
             <span>
                 We help turn that idea into something readers remember.
             </span>
         </div>
-
     </div>
 
 </section>
@@ -1033,10 +994,7 @@ footer{
 <section class="section services" id="services">
 
     <div class="section-head">
-
-        <div class="section-label">
-            What We Do
-        </div>
+        <div class="section-label">What We Do</div>
 
         <h2>
             Everything your book needs, under one roof.
@@ -1046,7 +1004,6 @@ footer{
             Professional support for writers, authors and businesses
             at every stage of the publishing journey.
         </p>
-
     </div>
 
     <div class="service-grid">
@@ -1112,7 +1069,6 @@ footer{
         </article>
 
     </div>
-
 </section>
 
 <!-- CTA -->
@@ -1121,9 +1077,7 @@ footer{
     <div class="cta-inner">
 
         <div>
-            <h2>
-                Have a story waiting to be told?
-            </h2>
+            <h2>Have a story waiting to be told?</h2>
 
             <p>
                 Tell us about your project and discover how we can
@@ -1163,8 +1117,9 @@ footer{
 
         <article class="book">
             <div class="book-cover">
-                <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=700&q=85" alt="Published book">
+                <img src="images/book1.jpg" alt="Published book 1">
             </div>
+
             <div class="book-info">
                 <h3>The Story Within</h3>
                 <p>Featured Publication</p>
@@ -1173,8 +1128,9 @@ footer{
 
         <article class="book">
             <div class="book-cover">
-                <img src="https://images.unsplash.com/photo-1511108690759-009324a90311?auto=format&fit=crop&w=700&q=85" alt="Published book">
+                <img src="images/book2.jpg" alt="Published book 2">
             </div>
+
             <div class="book-info">
                 <h3>New Beginnings</h3>
                 <p>Featured Publication</p>
@@ -1183,8 +1139,9 @@ footer{
 
         <article class="book">
             <div class="book-cover">
-                <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=700&q=85" alt="Published book">
+                <img src="images/book3.jpg" alt="Published book 3">
             </div>
+
             <div class="book-info">
                 <h3>Beyond the Pages</h3>
                 <p>Featured Publication</p>
@@ -1193,8 +1150,9 @@ footer{
 
         <article class="book">
             <div class="book-cover">
-                <img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=700&q=85" alt="Published book">
+                <img src="images/book4.jpg" alt="Published book 4">
             </div>
+
             <div class="book-info">
                 <h3>Words That Matter</h3>
                 <p>Featured Publication</p>
@@ -1202,7 +1160,6 @@ footer{
         </article>
 
     </div>
-
 </section>
 
 <!-- STATS -->
@@ -1318,8 +1275,11 @@ footer{
 
             <article class="story">
                 <div class="story-image"></div>
+
                 <small>Writing</small>
+
                 <h3>Finding your author's voice</h3>
+
                 <p>
                     Practical ideas to help develop a clear and memorable
                     writing voice.
@@ -1328,8 +1288,11 @@ footer{
 
             <article class="story">
                 <div class="story-image"></div>
+
                 <small>Publishing</small>
+
                 <h3>From manuscript to book</h3>
+
                 <p>
                     Understand the important stages between completing
                     your manuscript and publishing.
@@ -1338,8 +1301,11 @@ footer{
 
             <article class="story">
                 <div class="story-image"></div>
+
                 <small>Authors</small>
+
                 <h3>Building your author journey</h3>
+
                 <p>
                     Simple ways authors can prepare for a successful
                     publishing experience.
@@ -1370,47 +1336,59 @@ footer{
     <div class="faq">
 
         <div class="faq-item">
+
             <button class="faq-question">
                 What services do you provide?
                 <span>+</span>
             </button>
+
             <div class="faq-answer">
                 We provide writing, editing, publishing, design,
                 marketing and author-support services.
             </div>
+
         </div>
 
         <div class="faq-item">
+
             <button class="faq-question">
                 Can you help with an unfinished manuscript?
                 <span>+</span>
             </button>
+
             <div class="faq-answer">
                 Yes. We can discuss your existing material and recommend
                 the right service for your project.
             </div>
+
         </div>
 
         <div class="faq-item">
+
             <button class="faq-question">
                 How do I get started?
                 <span>+</span>
             </button>
+
             <div class="faq-answer">
                 Send us your project details through the contact form
                 and our team can discuss the next steps with you.
             </div>
+
         </div>
 
         <div class="faq-item">
+
             <button class="faq-question">
                 Do you work with new authors?
                 <span>+</span>
             </button>
+
             <div class="faq-answer">
                 Absolutely. We support both first-time authors and
                 experienced writers.
             </div>
+
         </div>
 
     </div>
@@ -1499,7 +1477,9 @@ footer{
                     Send Inquiry
                 </button>
 
-                <p id="formMessage" style="color:var(--green);font-size:13px;"></p>
+                <p id="formMessage"
+                   style="color:var(--green);font-size:13px;">
+                </p>
 
             </form>
 
@@ -1563,7 +1543,6 @@ footer{
 
 </footer>
 
-<!-- CHAT -->
 <button class="chat" id="chatBtn" aria-label="Contact">
     💬
 </button>
@@ -1572,17 +1551,10 @@ footer{
 
 /* MENU */
 
-const menuBtn =
-    document.getElementById("menuBtn");
-
-const closeMenu =
-    document.getElementById("closeMenu");
-
-const sideMenu =
-    document.getElementById("sideMenu");
-
-const overlay =
-    document.getElementById("overlay");
+const menuBtn = document.getElementById("menuBtn");
+const closeMenu = document.getElementById("closeMenu");
+const sideMenu = document.getElementById("sideMenu");
+const overlay = document.getElementById("overlay");
 
 function openMenu(){
     sideMenu.classList.add("open");
@@ -1598,25 +1570,18 @@ menuBtn.addEventListener("click",openMenu);
 closeMenu.addEventListener("click",closeSideMenu);
 overlay.addEventListener("click",closeSideMenu);
 
-document
-.querySelectorAll(".menu-link")
-.forEach(link=>{
+document.querySelectorAll(".menu-link").forEach(link=>{
     link.addEventListener("click",closeSideMenu);
 });
 
 /* SUBMENUS */
 
-document
-.querySelectorAll(".menu-parent")
-.forEach(parent=>{
+document.querySelectorAll(".menu-parent").forEach(parent=>{
 
     parent.addEventListener("click",()=>{
 
-        const id =
-            parent.getAttribute("data-sub");
-
-        const submenu =
-            document.getElementById(id);
+        const id = parent.getAttribute("data-sub");
+        const submenu = document.getElementById(id);
 
         submenu.classList.toggle("open");
 
@@ -1626,45 +1591,35 @@ document
 
 /* FAQ */
 
-document
-.querySelectorAll(".faq-question")
-.forEach(button=>{
+document.querySelectorAll(".faq-question").forEach(button=>{
 
     button.addEventListener("click",()=>{
 
-        const item =
-            button.parentElement;
+        const item = button.parentElement;
+        const isActive = item.classList.contains("active");
 
-        const isActive =
-            item.classList.contains("active");
-
-        document
-        .querySelectorAll(".faq-item")
-        .forEach(other=>{
+        document.querySelectorAll(".faq-item").forEach(other=>{
             other.classList.remove("active");
-            other
-            .querySelector(".faq-question span")
-            .textContent="+";
+
+            other.querySelector(".faq-question span")
+                .textContent="+";
         });
 
         if(!isActive){
 
             item.classList.add("active");
 
-            button
-            .querySelector("span")
-            .textContent="−";
-
+            button.querySelector("span")
+                .textContent="−";
         }
 
     });
 
 });
 
-/* CONTACT FORM */
+/* CONTACT */
 
-document
-.getElementById("contactForm")
+document.getElementById("contactForm")
 .addEventListener("submit",function(e){
 
     e.preventDefault();
@@ -1696,17 +1651,15 @@ document
 
 });
 
-/* CHAT BUTTON */
+/* CHAT */
 
-document
-.getElementById("chatBtn")
+document.getElementById("chatBtn")
 .addEventListener("click",()=>{
 
-    document
-    .getElementById("contact")
-    .scrollIntoView({
-        behavior:"smooth"
-    });
+    document.getElementById("contact")
+        .scrollIntoView({
+            behavior:"smooth"
+        });
 
 });
 
