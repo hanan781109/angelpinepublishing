@@ -1,9 +1,23 @@
-hero.jpg
-why.jpg
-book1.jpg
-book2.jpg
-book3.jpg
-book4.jpg
-story1.jpg
-story2.jpg
-story3.jpg
+your-website/
+├── index.html
+└── images/
+    ├── hero.jpg
+    ├── why.jpg
+    ├── story1.jpg
+    ├── story2.jpg
+    ├── story3.jpg
+    ├── book1.jpg
+    ├── book2.jpg
+    ├── book3.jpg
+    ├── book4.jpg
+    ├── book5.jpg
+    ├── book6.jpg
+    ├── book7.jpg
+    ├── book8.jpg
+    ├── book9.jpg
+    ├── book10.jpg
+    ├── book11.jpg
+    ├── book12.jpg
+    ├── book13.jpg
+    ├── book14.jpg
+    └── book15.jpg
