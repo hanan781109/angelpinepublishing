@@ -5,7 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Angel Pine Publishing</title>
-<meta name="description" content="Angel Pine Publishing — professional publishing, editing, ghostwriting, design and marketing services.">
+
+<meta name="description"
+content="Angel Pine Publishing — professional publishing, editing, ghostwriting, design and marketing services.">
 
 <style>
 :root{
@@ -47,6 +49,7 @@ button,input,textarea{
 }
 
 /* HEADER */
+
 header{
     position:sticky;
     top:0;
@@ -108,6 +111,7 @@ header{
 }
 
 /* SIDE MENU */
+
 .side-menu{
     position:fixed;
     top:0;
@@ -115,7 +119,7 @@ header{
     width:min(390px,90vw);
     height:100vh;
     background:var(--green);
-    color:#fff;
+    color:white;
     z-index:2000;
     padding:30px;
     transition:right .35s ease;
@@ -181,6 +185,7 @@ header{
 }
 
 /* HERO */
+
 .hero{
     min-height:680px;
     display:grid;
@@ -296,6 +301,7 @@ header{
 }
 
 /* SECTIONS */
+
 .section{
     max-width:1240px;
     margin:auto;
@@ -330,6 +336,7 @@ header{
 }
 
 /* SERVICES */
+
 .services{
     background:var(--white);
 }
@@ -380,6 +387,7 @@ header{
 }
 
 /* CTA */
+
 .green-cta{
     background:var(--green);
     color:white;
@@ -416,6 +424,7 @@ header{
 }
 
 /* BOOKS */
+
 .books{
     display:grid;
     grid-template-columns:repeat(4,1fr);
@@ -469,6 +478,7 @@ header{
 }
 
 /* STATS */
+
 .stats-section{
     background:var(--cream2);
 }
@@ -501,6 +511,7 @@ header{
 }
 
 /* WHY */
+
 .why-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
@@ -538,6 +549,7 @@ header{
 }
 
 /* STORIES */
+
 .story-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
@@ -589,6 +601,7 @@ header{
 }
 
 /* FAQ */
+
 .faq{
     max-width:850px;
     margin:auto;
@@ -625,6 +638,7 @@ header{
 }
 
 /* CONTACT */
+
 .contact{
     background:var(--white);
 }
@@ -675,7 +689,8 @@ header{
     gap:16px;
 }
 
-input,textarea{
+input,
+textarea{
     width:100%;
     padding:15px;
     border:1px solid var(--border);
@@ -690,11 +705,18 @@ textarea{
     resize:vertical;
 }
 
-input:focus,textarea:focus{
+input:focus,
+textarea:focus{
     border-color:var(--green);
 }
 
+#formMessage{
+    color:var(--green2);
+    font-size:14px;
+}
+
 /* FOOTER */
+
 footer{
     background:#102e25;
     color:white;
@@ -752,6 +774,7 @@ footer{
 }
 
 /* CHAT */
+
 .chat{
     position:fixed;
     right:22px;
@@ -769,6 +792,7 @@ footer{
 }
 
 /* RESPONSIVE */
+
 @media(max-width:1000px){
 
     .hero{
@@ -894,6 +918,8 @@ footer{
 
 <body>
 
+<!-- HEADER -->
+
 <header>
 <div class="nav">
 
@@ -912,6 +938,8 @@ footer{
 </header>
 
 <div class="overlay" id="overlay"></div>
+
+<!-- SIDE MENU -->
 
 <aside class="side-menu" id="sideMenu">
 
@@ -948,6 +976,7 @@ Publishing +
 <a href="#contact" class="menu-link">Contact</a>
 
 </nav>
+
 </aside>
 
 <main id="home">
@@ -1003,6 +1032,7 @@ We help turn that idea into something readers remember.
 </div>
 
 </section>
+
 
 <!-- SERVICES -->
 
@@ -1090,6 +1120,7 @@ through launch and beyond.
 </div>
 </section>
 
+
 <!-- CTA -->
 
 <section class="green-cta">
@@ -1117,7 +1148,8 @@ Request a Quote
 
 </section>
 
-<!-- BOOKS -->
+
+<!-- BOOKS - 15 BOOKS -->
 
 <section class="section" id="books">
 
@@ -1141,60 +1173,158 @@ authors through the publishing journey.
 <div class="books">
 
 <article class="book">
-
 <div class="book-cover">
-<img src="images/book1.jpg" alt="Published Book 1">
+<img src="images/book1.jpg" alt="Across the Ocean">
 </div>
-
 <div class="book-info">
-<h3>The Story Within</h3>
+<h3>Across the Ocean</h3>
 <p>Featured Publication</p>
 </div>
-
 </article>
 
 <article class="book">
-
 <div class="book-cover">
-<img src="images/book2.jpg" alt="Published Book 2">
+<img src="images/book2.jpg" alt="Make A Difference">
 </div>
-
 <div class="book-info">
-<h3>New Beginnings</h3>
+<h3>Make A Difference</h3>
 <p>Featured Publication</p>
 </div>
-
 </article>
 
 <article class="book">
-
 <div class="book-cover">
-<img src="images/book3.jpg" alt="Published Book 3">
+<img src="images/book3.jpg" alt="The Just Queen">
 </div>
+<div class="book-info">
+<h3>The Just Queen</h3>
+<p>Featured Publication</p>
+</div>
+</article>
 
+<article class="book">
+<div class="book-cover">
+<img src="images/book4.jpg" alt="The Very Last Hope">
+</div>
+<div class="book-info">
+<h3>The Very Last Hope</h3>
+<p>Featured Publication</p>
+</div>
+</article>
+
+<article class="book">
+<div class="book-cover">
+<img src="images/book5.jpg" alt="Science Book">
+</div>
+<div class="book-info">
+<h3>Science Book</h3>
+<p>Featured Publication</p>
+</div>
+</article>
+
+<article class="book">
+<div class="book-cover">
+<img src="images/book6.jpg" alt="Soldiers of Heaven">
+</div>
+<div class="book-info">
+<h3>Soldiers of Heaven</h3>
+<p>Featured Publication</p>
+</div>
+</article>
+
+<article class="book">
+<div class="book-cover">
+<img src="images/book7.jpg" alt="Published Book">
+</div>
+<div class="book-info">
+<h3>Words of Wisdom</h3>
+<p>Featured Publication</p>
+</div>
+</article>
+
+<article class="book">
+<div class="book-cover">
+<img src="images/book8.jpg" alt="Published Book">
+</div>
+<div class="book-info">
+<h3>New Horizons</h3>
+<p>Featured Publication</p>
+</div>
+</article>
+
+<article class="book">
+<div class="book-cover">
+<img src="images/book9.jpg" alt="Published Book">
+</div>
 <div class="book-info">
 <h3>Beyond the Pages</h3>
 <p>Featured Publication</p>
 </div>
-
 </article>
 
 <article class="book">
-
 <div class="book-cover">
-<img src="images/book4.jpg" alt="Published Book 4">
+<img src="images/book10.jpg" alt="Published Book">
 </div>
+<div class="book-info">
+<h3>The Story Within</h3>
+<p>Featured Publication</p>
+</div>
+</article>
 
+<article class="book">
+<div class="book-cover">
+<img src="images/book11.jpg" alt="Published Book">
+</div>
+<div class="book-info">
+<h3>New Beginnings</h3>
+<p>Featured Publication</p>
+</div>
+</article>
+
+<article class="book">
+<div class="book-cover">
+<img src="images/book12.jpg" alt="Published Book">
+</div>
 <div class="book-info">
 <h3>Words That Matter</h3>
 <p>Featured Publication</p>
 </div>
+</article>
 
+<article class="book">
+<div class="book-cover">
+<img src="images/book13.jpg" alt="Published Book">
+</div>
+<div class="book-info">
+<h3>Dreams & Stories</h3>
+<p>Featured Publication</p>
+</div>
+</article>
+
+<article class="book">
+<div class="book-cover">
+<img src="images/book14.jpg" alt="Published Book">
+</div>
+<div class="book-info">
+<h3>A New Chapter</h3>
+<p>Featured Publication</p>
+</div>
+</article>
+
+<article class="book">
+<div class="book-cover">
+<img src="images/book15.jpg" alt="Published Book">
+</div>
+<div class="book-info">
+<h3>Stories to Remember</h3>
+<p>Featured Publication</p>
+</div>
 </article>
 
 </div>
-
 </section>
+
 
 <!-- STATS -->
 
@@ -1229,6 +1359,7 @@ authors through the publishing journey.
 </div>
 
 </section>
+
 
 <!-- WHY -->
 
@@ -1289,6 +1420,7 @@ at the center of the process.
 </div>
 
 </section>
+
 
 <!-- STORIES -->
 
@@ -1361,6 +1493,7 @@ publishing experience.
 
 </section>
 
+
 <!-- FAQ -->
 
 <section class="section">
@@ -1393,6 +1526,7 @@ marketing and author-support services.
 
 </div>
 
+
 <div class="faq-item">
 
 <button class="faq-question">
@@ -1407,6 +1541,7 @@ the right service for your project.
 
 </div>
 
+
 <div class="faq-item">
 
 <button class="faq-question">
@@ -1420,6 +1555,7 @@ and our team can discuss the next steps with you.
 </div>
 
 </div>
+
 
 <div class="faq-item">
 
@@ -1438,6 +1574,7 @@ experienced writers.
 </div>
 
 </section>
+
 
 <!-- CONTACT -->
 
@@ -1461,6 +1598,7 @@ will help you decide what comes next.
 </p>
 
 </div>
+
 
 <div class="contact-grid">
 
@@ -1489,6 +1627,7 @@ will help you decide what comes next.
 </div>
 
 </div>
+
 
 <form class="contact-form" id="contactForm">
 
@@ -1534,6 +1673,7 @@ Send Inquiry
 
 </main>
 
+
 <!-- FOOTER -->
 
 <footer>
@@ -1555,6 +1695,7 @@ professional books ready for readers.
 
 </div>
 
+
 <div>
 
 <h4>Services</h4>
@@ -1565,6 +1706,7 @@ professional books ready for readers.
 <a href="#services">Design</a>
 
 </div>
+
 
 <div>
 
@@ -1577,6 +1719,7 @@ professional books ready for readers.
 
 </div>
 
+
 <div>
 
 <h4>Get Started</h4>
@@ -1588,6 +1731,7 @@ professional books ready for readers.
 </div>
 
 </div>
+
 
 <div class="copyright">
 
@@ -1605,121 +1749,124 @@ Professional Publishing Services
 
 </footer>
 
+
+<!-- CHAT BUTTON -->
+
 <button class="chat" id="chatBtn">
 💬
 </button>
+
 
 <script>
 
 /* MENU */
 
-const menuBtn=document.getElementById("menuBtn");
-const closeMenu=document.getElementById("closeMenu");
-const sideMenu=document.getElementById("sideMenu");
-const overlay=document.getElementById("overlay");
+const menuBtn = document.getElementById("menuBtn");
+const closeMenu = document.getElementById("closeMenu");
+const sideMenu = document.getElementById("sideMenu");
+const overlay = document.getElementById("overlay");
 
 function openMenu(){
-sideMenu.classList.add("open");
-overlay.classList.add("show");
+    sideMenu.classList.add("open");
+    overlay.classList.add("show");
 }
 
 function closeSideMenu(){
-sideMenu.classList.remove("open");
-overlay.classList.remove("show");
+    sideMenu.classList.remove("open");
+    overlay.classList.remove("show");
 }
 
-menuBtn.addEventListener("click",openMenu);
-closeMenu.addEventListener("click",closeSideMenu);
-overlay.addEventListener("click",closeSideMenu);
+menuBtn.addEventListener("click", openMenu);
+closeMenu.addEventListener("click", closeSideMenu);
+overlay.addEventListener("click", closeSideMenu);
 
 document.querySelectorAll(".menu-link").forEach(link=>{
-link.addEventListener("click",closeSideMenu);
+    link.addEventListener("click", closeSideMenu);
 });
+
 
 /* SUBMENUS */
 
 document.querySelectorAll(".menu-parent").forEach(parent=>{
 
-parent.addEventListener("click",()=>{
+    parent.addEventListener("click",()=>{
 
-const id=parent.getAttribute("data-sub");
-const submenu=document.getElementById(id);
+        const id = parent.getAttribute("data-sub");
+        const submenu = document.getElementById(id);
 
-submenu.classList.toggle("open");
+        submenu.classList.toggle("open");
+
+    });
 
 });
 
-});
 
 /* FAQ */
 
 document.querySelectorAll(".faq-question").forEach(button=>{
 
-button.addEventListener("click",()=>{
+    button.addEventListener("click",()=>{
 
-const item=button.parentElement;
-const active=item.classList.contains("active");
+        const item = button.parentElement;
+        const active = item.classList.contains("active");
 
-document.querySelectorAll(".faq-item").forEach(other=>{
+        document.querySelectorAll(".faq-item").forEach(other=>{
 
-other.classList.remove("active");
+            other.classList.remove("active");
 
-other.querySelector(".faq-question span")
-.textContent="+";
+            other.querySelector(".faq-question span").textContent = "+";
 
-});
+        });
 
-if(!active){
+        if(!active){
 
-item.classList.add("active");
+            item.classList.add("active");
 
-button.querySelector("span")
-.textContent="−";
+            button.querySelector("span").textContent = "−";
 
-}
+        }
 
-});
+    });
 
 });
 
-/* CONTACT */
 
-document.getElementById("contactForm")
-.addEventListener("submit",function(e){
+/* CONTACT FORM */
 
-e.preventDefault();
+document.getElementById("contactForm").addEventListener("submit",function(e){
 
-const name=document.getElementById("name").value.trim();
-const email=document.getElementById("email").value.trim();
-const message=document.getElementById("message").value.trim();
+    e.preventDefault();
 
-const formMessage=document.getElementById("formMessage");
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
 
-if(!name || !email || !message){
+    const formMessage = document.getElementById("formMessage");
 
-formMessage.textContent=
-"Please complete the required fields.";
+    if(!name || !email || !message){
 
-return;
+        formMessage.textContent =
+        "Please complete the required fields.";
 
-}
+        return;
 
-formMessage.textContent=
-"Thank you. Your inquiry is ready to be submitted.";
+    }
 
-this.reset();
+    formMessage.textContent =
+    "Thank you! Your inquiry has been received.";
+
+    this.reset();
 
 });
+
 
 /* CHAT */
 
-document.getElementById("chatBtn")
-.addEventListener("click",()=>{
+document.getElementById("chatBtn").addEventListener("click",()=>{
 
-document.getElementById("contact")
-.scrollIntoView({
-behavior:"smooth"
-});
+    document.getElementById("contact").scrollIntoView({
+        behavior:"smooth"
+    });
 
 });
 
