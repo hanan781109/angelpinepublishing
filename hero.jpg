@@ -1,0 +1,40 @@
+images/hero.jpg
+images/book1.jpg
+images/book2.jpg
+images/book3.jpg
+images/book4.jpg
+images/why.jpg
+images/story1.jpg
+images/story2.jpg
+images/story3.jpg
+``` citeturn6view0turn7view0
+
+
+### Isliye pics show nahi ho rahi hain
+
+Code **galat nahi hai**. Problem ye hai ke `images/` folder aur uske andar actual JPG files GitHub mein **maujood hi nahi hain**.
+
+### Ab kya karna hai
+
+GitHub mein:
+
+**`Add file` → `Upload files`**
+
+phir **actual 9 photos** upload karo aur folder ka naam `images` rakho:
+
+```text
+angelpinepublishing/
+│
+├── index.html
+├── pricing.html
+│
+└── images/
+    ├── hero.jpg
+    ├── why.jpg
+    ├── book1.jpg
+    ├── book2.jpg
+    ├── book3.jpg
+    ├── book4.jpg
+    ├── story1.jpg
+    ├── story2.jpg
+    └── story3.jpg
