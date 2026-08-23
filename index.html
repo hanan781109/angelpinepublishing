@@ -448,6 +448,7 @@ header{
     border:1px solid var(--border);
     padding:14px;
     transition:.25s;
+    overflow:hidden;
 }
 
 .book:hover{
@@ -458,7 +459,9 @@ header{
 .book-cover{
     height:390px;
     overflow:hidden;
-    background:var(--cream2);
+    background:
+        linear-gradient(135deg,#173f32,#496653 50%,#d0b47b);
+    position:relative;
 }
 
 .book-cover img{
@@ -471,6 +474,72 @@ header{
 
 .book:hover img{
     transform:scale(1.04);
+}
+
+
+/* BOOK FALLBACK */
+
+.book-fallback{
+    position:absolute;
+    inset:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:30px;
+    color:#fffdf8;
+    overflow:hidden;
+}
+
+.book-fallback::before{
+    content:"";
+    position:absolute;
+    width:260px;
+    height:260px;
+    border:1px solid rgba(255,255,255,.35);
+    border-radius:50%;
+    top:-90px;
+    right:-80px;
+}
+
+.book-fallback::after{
+    content:"✦";
+    position:absolute;
+    font-size:150px;
+    color:rgba(255,255,255,.08);
+    bottom:-50px;
+    left:-10px;
+}
+
+.book-fallback-content{
+    position:relative;
+    z-index:2;
+}
+
+.book-fallback .small{
+    display:block;
+    font-size:10px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    margin-bottom:22px;
+    opacity:.8;
+}
+
+.book-fallback strong{
+    display:block;
+    font-family:Georgia,serif;
+    font-size:30px;
+    line-height:1.15;
+    font-weight:500;
+}
+
+.book-fallback span{
+    display:block;
+    margin-top:18px;
+    font-size:11px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    opacity:.8;
 }
 
 
@@ -518,34 +587,48 @@ header{
 }
 
 
-/* AI STYLE GENERATED VISUAL */
+/* PREMIUM AI-STYLE VISUAL */
 
 .why-image{
     height:520px;
-    border-radius:10px;
+    border-radius:12px;
     position:relative;
     overflow:hidden;
     background:
-        linear-gradient(135deg,
-        rgba(23,63,50,.92),
-        rgba(74,91,59,.55)),
-        radial-gradient(circle at 30% 30%,#d8bd7b,transparent 28%),
-        radial-gradient(circle at 75% 65%,#b79b61,transparent 25%);
+        radial-gradient(circle at 20% 20%,rgba(222,190,116,.85),transparent 20%),
+        radial-gradient(circle at 80% 70%,rgba(191,153,78,.7),transparent 24%),
+        linear-gradient(135deg,#0d2921 0%,#173f32 35%,#42634e 62%,#c6aa72 100%);
+    box-shadow:0 25px 60px rgba(23,63,50,.22);
 }
 
-.why-image:after{
-    content:"✦  BOOKS • IDEAS • STORIES  ✦";
+.why-image::before{
+    content:"";
+    position:absolute;
+    width:360px;
+    height:500px;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%) rotate(-8deg);
+    border:1px solid rgba(255,255,255,.3);
+    box-shadow:
+        0 0 0 18px rgba(255,255,255,.04),
+        0 0 0 36px rgba(255,255,255,.03);
+}
+
+.why-image::after{
+    content:"✦  BOOKS  •  IDEAS  •  STORIES  ✦";
     position:absolute;
     inset:0;
     display:flex;
     align-items:center;
     justify-content:center;
     text-align:center;
-    color:#f4ead4;
+    color:#f7ead0;
     font-family:Georgia,serif;
-    font-size:34px;
+    font-size:31px;
     letter-spacing:3px;
-    padding:40px;
+    padding:45px;
+    text-shadow:0 4px 25px rgba(0,0,0,.35);
 }
 
 
@@ -587,48 +670,87 @@ header{
     background:var(--white);
     border:1px solid var(--border);
     padding:25px;
+    overflow:hidden;
 }
 
 .story-image{
-    height:220px;
+    height:240px;
     margin:-25px -25px 22px;
-    background-position:center;
-    background-size:cover;
     position:relative;
     overflow:hidden;
 }
 
 
-/* AI GENERATED STYLE STORY IMAGES */
+/* WRITING VISUAL */
 
 .story:nth-child(1) .story-image{
     background:
-        radial-gradient(circle at 70% 30%,#d9bd76 0 8%,transparent 9%),
-        linear-gradient(135deg,#233f34,#806e45 55%,#e8ddc4);
+        radial-gradient(circle at 75% 25%,rgba(255,224,151,.9),transparent 12%),
+        radial-gradient(circle at 20% 75%,rgba(180,145,76,.5),transparent 20%),
+        linear-gradient(135deg,#102d25,#315745 55%,#b7985e);
 }
+
+.story:nth-child(1) .story-image::before{
+    content:"✍";
+    position:absolute;
+    font-size:105px;
+    color:rgba(255,255,255,.82);
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%) rotate(-12deg);
+    font-family:Georgia,serif;
+}
+
+
+/* PUBLISHING VISUAL */
 
 .story:nth-child(2) .story-image{
     background:
-        radial-gradient(circle at 35% 40%,#f0e4c8 0 12%,transparent 13%),
-        linear-gradient(135deg,#15372e,#496653 50%,#c7ae78);
+        radial-gradient(circle at 35% 25%,rgba(255,244,211,.9),transparent 15%),
+        linear-gradient(135deg,#183b31,#4d705a 50%,#c7a968);
 }
+
+.story:nth-child(2) .story-image::before{
+    content:"▣";
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    font-size:110px;
+    color:rgba(255,255,255,.82);
+    font-family:Georgia,serif;
+}
+
+
+/* AUTHOR VISUAL */
 
 .story:nth-child(3) .story-image{
     background:
-        radial-gradient(circle at 65% 45%,#d5b66e 0 10%,transparent 11%),
-        linear-gradient(135deg,#152d27,#657354 52%,#e1d4b6);
+        radial-gradient(circle at 65% 35%,rgba(231,199,125,.85),transparent 17%),
+        radial-gradient(circle at 25% 70%,rgba(255,255,255,.16),transparent 20%),
+        linear-gradient(135deg,#112d26,#56705c 50%,#d2bb88);
 }
 
-.story-image:after{
-    content:"✦";
+.story:nth-child(3) .story-image::before{
+    content:"★";
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    font-size:105px;
+    color:rgba(255,255,255,.8);
+    font-family:Georgia,serif;
+}
+
+.story-image::after{
+    content:"";
     position:absolute;
     inset:0;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:rgba(255,255,255,.75);
-    font-size:65px;
-    font-family:Georgia,serif;
+    background:
+        linear-gradient(115deg,
+        transparent 0 42%,
+        rgba(255,255,255,.10) 43%,
+        transparent 44% 100%);
 }
 
 .story small{
@@ -968,11 +1090,18 @@ footer{
         flex-direction:column;
     }
 
+    .why-image{
+        height:360px;
+    }
+
+    .why-image::after{
+        font-size:23px;
+    }
+
 }
 
 </style>
 </head>
-
 
 <body>
 
@@ -990,7 +1119,6 @@ footer{
 <span>Angel Pine Publishing</span>
 
 </a>
-
 
 <button class="menu-btn" id="menuBtn">
 
@@ -1281,7 +1409,7 @@ Request a Quote
 
 
 
-<!-- 6 BOOKS ONLY -->
+<!-- BOOKS -->
 
 <section class="section" id="books">
 
@@ -1315,7 +1443,15 @@ authors through the publishing journey.
 <img
 src="images/book3.jpg"
 alt="Published Book 1"
-loading="lazy">
+onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+
+<div class="book-fallback" style="display:none;">
+<div class="book-fallback-content">
+<span class="small">Angel Pine Publishing</span>
+<strong>The Art<br>of Storytelling</strong>
+<span>Published Works</span>
+</div>
+</div>
 
 </div>
 
@@ -1331,7 +1467,15 @@ loading="lazy">
 <img
 src="images/book4.jpg"
 alt="Published Book 2"
-loading="lazy">
+onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+
+<div class="book-fallback" style="display:none;">
+<div class="book-fallback-content">
+<span class="small">Angel Pine Publishing</span>
+<strong>Words<br>That Matter</strong>
+<span>Published Works</span>
+</div>
+</div>
 
 </div>
 
@@ -1347,7 +1491,15 @@ loading="lazy">
 <img
 src="images/book5.jpg"
 alt="Published Book 3"
-loading="lazy">
+onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+
+<div class="book-fallback" style="display:none;">
+<div class="book-fallback-content">
+<span class="small">Angel Pine Publishing</span>
+<strong>Beyond<br>the Pages</strong>
+<span>Published Works</span>
+</div>
+</div>
 
 </div>
 
@@ -1363,7 +1515,15 @@ loading="lazy">
 <img
 src="images/book6.jpg"
 alt="Published Book 4"
-loading="lazy">
+onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+
+<div class="book-fallback" style="display:none;">
+<div class="book-fallback-content">
+<span class="small">Angel Pine Publishing</span>
+<strong>A Writer's<br>Journey</strong>
+<span>Published Works</span>
+</div>
+</div>
 
 </div>
 
@@ -1379,7 +1539,15 @@ loading="lazy">
 <img
 src="images/book7.jpg"
 alt="Published Book 5"
-loading="lazy">
+onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+
+<div class="book-fallback" style="display:none;">
+<div class="book-fallback-content">
+<span class="small">Angel Pine Publishing</span>
+<strong>Stories<br>Unfold</strong>
+<span>Published Works</span>
+</div>
+</div>
 
 </div>
 
@@ -1395,7 +1563,15 @@ loading="lazy">
 <img
 src="images/book8.jpg"
 alt="Published Book 6"
-loading="lazy">
+onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+
+<div class="book-fallback" style="display:none;">
+<div class="book-fallback-content">
+<span class="small">Angel Pine Publishing</span>
+<strong>The Next<br>Chapter</strong>
+<span>Published Works</span>
+</div>
+</div>
 
 </div>
 
@@ -1417,38 +1593,23 @@ loading="lazy">
 <div class="stats">
 
 <div class="stat">
-
 <strong>10+</strong>
-
 <span>Years of Experience</span>
-
 </div>
 
-
 <div class="stat">
-
 <strong>500+</strong>
-
 <span>Books Supported</span>
-
 </div>
 
-
 <div class="stat">
-
 <strong>30+</strong>
-
 <span>Publishing Experts</span>
-
 </div>
 
-
 <div class="stat">
-
 <strong>98%</strong>
-
 <span>Client Satisfaction</span>
-
 </div>
 
 </div>
@@ -1465,9 +1626,7 @@ loading="lazy">
 
 <div class="why-grid">
 
-
 <div class="why-image"></div>
-
 
 <div>
 
@@ -1479,9 +1638,7 @@ Why Angel Pine
 Your vision stays at the heart of everything we do.
 </h2>
 
-
 <div class="features">
-
 
 <div class="feature">
 
@@ -1537,7 +1694,6 @@ at the center of the process.
 </p>
 
 </div>
-
 
 </div>
 
@@ -1822,7 +1978,6 @@ Available by appointment
 
 <form class="contact-form" id="contactForm">
 
-
 <div class="form-row">
 
 <input
@@ -1830,7 +1985,6 @@ type="text"
 id="name"
 placeholder="Your Name"
 required>
-
 
 <input
 type="email"
@@ -1965,181 +2119,99 @@ Professional Publishing Services
 
 <script>
 
-
 /* MENU */
 
-const menuBtn =
-document.getElementById("menuBtn");
-
-const closeMenu =
-document.getElementById("closeMenu");
-
-const sideMenu =
-document.getElementById("sideMenu");
-
-const overlay =
-document.getElementById("overlay");
-
+const menuBtn = document.getElementById("menuBtn");
+const closeMenu = document.getElementById("closeMenu");
+const sideMenu = document.getElementById("sideMenu");
+const overlay = document.getElementById("overlay");
 
 function openMenu(){
-
     sideMenu.classList.add("open");
-
     overlay.classList.add("show");
-
 }
-
 
 function closeSideMenu(){
-
     sideMenu.classList.remove("open");
-
     overlay.classList.remove("show");
-
 }
 
+menuBtn.addEventListener("click",openMenu);
+closeMenu.addEventListener("click",closeSideMenu);
+overlay.addEventListener("click",closeSideMenu);
 
-menuBtn.addEventListener(
-    "click",
-    openMenu
-);
-
-closeMenu.addEventListener(
-    "click",
-    closeSideMenu
-);
-
-overlay.addEventListener(
-    "click",
-    closeSideMenu
-);
-
-
-document
-.querySelectorAll(".menu-link")
-.forEach(link=>{
-
-    link.addEventListener(
-        "click",
-        closeSideMenu
-    );
-
+document.querySelectorAll(".menu-link").forEach(link=>{
+    link.addEventListener("click",closeSideMenu);
 });
-
 
 
 /* SUBMENUS */
 
-document
-.querySelectorAll(".menu-parent")
-.forEach(parent=>{
+document.querySelectorAll(".menu-parent").forEach(parent=>{
 
-    parent.addEventListener(
-        "click",
-        ()=>{
+    parent.addEventListener("click",()=>{
 
-            const id =
-            parent.getAttribute("data-sub");
+        const id = parent.getAttribute("data-sub");
+        const submenu = document.getElementById(id);
 
-            const submenu =
-            document.getElementById(id);
+        submenu.classList.toggle("open");
 
-            submenu.classList.toggle("open");
-
-        }
-    );
+    });
 
 });
-
 
 
 /* FAQ */
 
-document
-.querySelectorAll(".faq-question")
-.forEach(button=>{
+document.querySelectorAll(".faq-question").forEach(button=>{
 
-    button.addEventListener(
-        "click",
-        ()=>{
+    button.addEventListener("click",()=>{
 
-            const item =
-            button.parentElement;
+        const item = button.parentElement;
+        const active = item.classList.contains("active");
 
-            const active =
-            item.classList.contains("active");
+        document.querySelectorAll(".faq-item").forEach(other=>{
 
+            other.classList.remove("active");
 
-            document
-            .querySelectorAll(".faq-item")
-            .forEach(other=>{
+            other.querySelector(
+                ".faq-question span"
+            ).textContent="+";
 
-                other.classList.remove(
-                    "active"
-                );
+        });
 
-                other
-                .querySelector(
-                    ".faq-question span"
-                )
-                .textContent="+";
+        if(!active){
 
-            });
+            item.classList.add("active");
 
-
-            if(!active){
-
-                item.classList.add("active");
-
-                button
-                .querySelector("span")
-                .textContent="−";
-
-            }
+            button.querySelector("span").textContent="−";
 
         }
-    );
+
+    });
 
 });
 
 
-
 /* CONTACT FORM */
 
-document
-.getElementById("contactForm")
-.addEventListener(
+document.getElementById("contactForm").addEventListener(
     "submit",
     function(e){
 
         e.preventDefault();
 
-
         const name =
-        document
-        .getElementById("name")
-        .value
-        .trim();
-
+        document.getElementById("name").value.trim();
 
         const email =
-        document
-        .getElementById("email")
-        .value
-        .trim();
-
+        document.getElementById("email").value.trim();
 
         const message =
-        document
-        .getElementById("message")
-        .value
-        .trim();
-
+        document.getElementById("message").value.trim();
 
         const formMessage =
-        document
-        .getElementById("formMessage");
-
+        document.getElementById("formMessage");
 
         if(!name || !email || !message){
 
@@ -2150,10 +2222,8 @@ document
 
         }
 
-
         formMessage.textContent =
         "Thank you! Your inquiry has been received.";
-
 
         this.reset();
 
@@ -2161,21 +2231,14 @@ document
 );
 
 
-
 /* CHAT */
 
-document
-.getElementById("chatBtn")
-.addEventListener(
+document.getElementById("chatBtn").addEventListener(
     "click",
     ()=>{
-
-        document
-        .getElementById("contact")
-        .scrollIntoView({
+        document.getElementById("contact").scrollIntoView({
             behavior:"smooth"
         });
-
     }
 );
 
