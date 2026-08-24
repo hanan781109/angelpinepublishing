@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,13 +45,11 @@ a{
     text-decoration:none;
 }
 
-button,
-input,
-textarea{
+button,input,textarea{
     font:inherit;
 }
 
-/* ================= HEADER ================= */
+/* HEADER */
 
 header{
     position:sticky;
@@ -112,7 +111,7 @@ header{
     background:var(--green);
 }
 
-/* ================= SIDE MENU ================= */
+/* SIDE MENU */
 
 .side-menu{
     position:fixed;
@@ -186,7 +185,7 @@ header{
     display:block;
 }
 
-/* ================= HERO ================= */
+/* HERO */
 
 .hero{
     min-height:680px;
@@ -270,7 +269,7 @@ header{
     color:white;
 }
 
-/* ================= HERO IMAGE ================= */
+/* ORIGINAL HERO BOOK IMAGE */
 
 .hero-art{
     min-height:480px;
@@ -280,8 +279,7 @@ header{
 
     background:
         linear-gradient(rgba(23,63,50,.12),rgba(23,63,50,.12)),
-        url("https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1400&q=90")
-        center/cover no-repeat;
+        url("images/hero.jpg") center/cover no-repeat;
 
     background-color:#e8e0cd;
 }
@@ -308,7 +306,7 @@ header{
     font-size:13px;
 }
 
-/* ================= SECTIONS ================= */
+/* SECTIONS */
 
 .section{
     max-width:1240px;
@@ -343,7 +341,7 @@ header{
     line-height:1.8;
 }
 
-/* ================= SERVICES ================= */
+/* SERVICES */
 
 .services{
     background:var(--white);
@@ -394,7 +392,7 @@ header{
     font-weight:800;
 }
 
-/* ================= CTA ================= */
+/* CTA */
 
 .green-cta{
     background:var(--green);
@@ -431,7 +429,7 @@ header{
     white-space:nowrap;
 }
 
-/* ================= BOOKS ================= */
+/* BOOKS */
 
 .books{
     display:grid;
@@ -469,7 +467,7 @@ header{
     transform:scale(1.04);
 }
 
-/* ================= STATS ================= */
+/* STATS */
 
 .stats-section{
     background:var(--cream2);
@@ -502,7 +500,7 @@ header{
     font-size:13px;
 }
 
-/* ================= WHY ================= */
+/* WHY */
 
 .why-grid{
     display:grid;
@@ -518,7 +516,10 @@ header{
     overflow:hidden;
 
     background:
-        linear-gradient(rgba(23,63,50,.25),rgba(23,63,50,.35)),
+        linear-gradient(
+            rgba(23,63,50,.28),
+            rgba(23,63,50,.38)
+        ),
         url("https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=1400&q=90")
         center/cover no-repeat;
 }
@@ -542,7 +543,7 @@ header{
     );
 }
 
-/* ================= FEATURES ================= */
+/* FEATURES */
 
 .features{
     display:grid;
@@ -567,92 +568,7 @@ header{
     font-size:14px;
 }
 
-/* ================= PRICING ================= */
-
-.pricing-section{
-    background:var(--white);
-}
-
-.pricing-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
-.price-card{
-    position:relative;
-    background:var(--cream);
-    border:1px solid var(--border);
-    padding:35px 30px;
-    transition:.25s;
-}
-
-.price-card:hover{
-    transform:translateY(-6px);
-    box-shadow:0 18px 40px rgba(23,63,50,.12);
-}
-
-.price-card.featured{
-    border:2px solid var(--green);
-    transform:translateY(-8px);
-}
-
-.price-card.featured:hover{
-    transform:translateY(-13px);
-}
-
-.price-badge{
-    position:absolute;
-    top:-14px;
-    left:25px;
-    background:var(--orange);
-    color:white;
-    padding:7px 13px;
-    border-radius:20px;
-    font-size:11px;
-    font-weight:800;
-}
-
-.price-card h3{
-    font-family:Georgia,serif;
-    font-size:28px;
-    font-weight:500;
-    margin-bottom:12px;
-}
-
-.price{
-    font-family:Georgia,serif;
-    color:var(--green);
-    font-size:42px;
-    margin:18px 0;
-}
-
-.price small{
-    font-family:Arial,sans-serif;
-    font-size:13px;
-    color:var(--muted);
-}
-
-.price-card ul{
-    list-style:none;
-    margin:25px 0;
-}
-
-.price-card li{
-    padding:10px 0;
-    border-bottom:1px solid var(--border);
-    color:var(--muted);
-    font-size:14px;
-}
-
-.price-card li:before{
-    content:"✓";
-    color:var(--green2);
-    font-weight:bold;
-    margin-right:9px;
-}
-
-/* ================= STORIES ================= */
+/* STORIES */
 
 .story-grid{
     display:grid;
@@ -728,7 +644,7 @@ header{
     font-size:14px;
 }
 
-/* ================= FAQ ================= */
+/* FAQ */
 
 .faq{
     max-width:850px;
@@ -753,15 +669,6 @@ header{
     cursor:pointer;
 }
 
-.faq-question span{
-    font-size:25px;
-    transition:.25s;
-}
-
-.faq-item.active .faq-question span{
-    transform:rotate(45deg);
-}
-
 .faq-answer{
     display:none;
     color:var(--muted);
@@ -774,7 +681,7 @@ header{
     display:block;
 }
 
-/* ================= CONTACT ================= */
+/* CONTACT */
 
 .contact{
     background:var(--white);
@@ -826,8 +733,7 @@ header{
     gap:16px;
 }
 
-input,
-textarea{
+input,textarea{
     width:100%;
     padding:15px;
     border:1px solid var(--border);
@@ -842,8 +748,7 @@ textarea{
     resize:vertical;
 }
 
-input:focus,
-textarea:focus{
+input:focus,textarea:focus{
     border-color:var(--green);
 }
 
@@ -852,7 +757,7 @@ textarea:focus{
     font-size:14px;
 }
 
-/* ================= FOOTER ================= */
+/* FOOTER */
 
 footer{
     background:#102e25;
@@ -910,7 +815,7 @@ footer{
     gap:15px;
 }
 
-/* ================= CHAT ================= */
+/* CHAT */
 
 .chat{
     position:fixed;
@@ -928,7 +833,7 @@ footer{
     z-index:900;
 }
 
-/* ================= RESPONSIVE ================= */
+/* RESPONSIVE */
 
 @media(max-width:1000px){
 
@@ -941,8 +846,7 @@ footer{
         min-height:420px;
     }
 
-    .books,
-    .pricing-grid{
+    .books{
         grid-template-columns:repeat(2,1fr);
     }
 
@@ -1013,8 +917,7 @@ footer{
     }
 
     .service-grid,
-    .books,
-    .pricing-grid{
+    .books{
         grid-template-columns:1fr;
     }
 
@@ -1051,21 +954,11 @@ footer{
     .copyright{
         flex-direction:column;
     }
-
-    .price-card.featured{
-        transform:none;
-    }
-
-    .price-card.featured:hover{
-        transform:translateY(-6px);
-    }
 }
 </style>
 </head>
 
 <body>
-
-<!-- ================= HEADER ================= -->
 
 <header>
 <div class="nav">
@@ -1086,11 +979,9 @@ footer{
 
 <div class="overlay" id="overlay"></div>
 
-<!-- ================= SIDE MENU ================= -->
-
 <aside class="side-menu" id="sideMenu">
 
-<button class="close-menu" id="closeMenu">×</button>
+<button class="close-menu" id="closeMenu" aria-label="Close menu">×</button>
 
 <nav>
 
@@ -1118,28 +1009,20 @@ Publishing +
 </div>
 
 <a href="#services" class="menu-link">Marketing</a>
-
 <a href="#services" class="menu-link">Designing</a>
 
-<a href="#pricing" class="menu-link">Pricing</a>
-
-<a href="pricing.html" class="menu-link">
-View Full Pricing Page →
-</a>
+<!-- PRICING ONLY IN PRICING PAGE -->
+<a href="pricing.html" class="menu-link">Pricing</a>
 
 <a href="#contact" class="menu-link">Hire a Writer</a>
-
-<a href="#faq" class="menu-link">FAQ</a>
-
 <a href="#contact" class="menu-link">Contact</a>
 
 </nav>
-
 </aside>
 
 <main id="home">
 
-<!-- ================= HERO ================= -->
+<!-- HERO -->
 
 <section class="hero">
 
@@ -1173,6 +1056,7 @@ Explore Services
 
 </div>
 
+<!-- ORIGINAL BOOK HERO IMAGE -->
 <div class="hero-art">
 
 <div class="hero-art-card">
@@ -1191,7 +1075,7 @@ We help turn that idea into something readers remember.
 
 </section>
 
-<!-- ================= SERVICES ================= -->
+<!-- SERVICES -->
 
 <section class="section services" id="services">
 
@@ -1275,10 +1159,9 @@ through launch and beyond.
 </article>
 
 </div>
-
 </section>
 
-<!-- ================= CTA ================= -->
+<!-- CTA -->
 
 <section class="green-cta">
 
@@ -1302,10 +1185,9 @@ Request a Quote
 </a>
 
 </div>
-
 </section>
 
-<!-- ================= BOOKS ================= -->
+<!-- BOOKS -->
 
 <section class="section" id="books">
 
@@ -1330,63 +1212,44 @@ authors through the publishing journey.
 
 <article class="book">
 <div class="book-cover">
-<img
-src="images/book1.jpg"
-alt="Published Book 1"
-onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=900&q=85'">
+<img src="images/book1.jpg" alt="Published Book 1">
 </div>
 </article>
 
 <article class="book">
 <div class="book-cover">
-<img
-src="images/book2.jpg"
-alt="Published Book 2"
-onerror="this.src='https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=900&q=85'">
+<img src="images/book2.jpg" alt="Published Book 2">
 </div>
 </article>
 
 <article class="book">
 <div class="book-cover">
-<img
-src="images/book3.jpg"
-alt="Published Book 3"
-onerror="this.src='https://images.unsplash.com/photo-1543002588-bfa74002ed7e?auto=format&fit=crop&w=900&q=85'">
+<img src="images/book3.jpg" alt="Published Book 3">
 </div>
 </article>
 
 <article class="book">
 <div class="book-cover">
-<img
-src="images/book4.jpg"
-alt="Published Book 4"
-onerror="this.src='https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=900&q=85'">
+<img src="images/book4.jpg" alt="Published Book 4">
 </div>
 </article>
 
 <article class="book">
 <div class="book-cover">
-<img
-src="images/book5.jpg"
-alt="Published Book 5"
-onerror="this.src='https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=900&q=85'">
+<img src="images/book5.jpg" alt="Published Book 5">
 </div>
 </article>
 
 <article class="book">
 <div class="book-cover">
-<img
-src="images/book6.jpg"
-alt="Published Book 6"
-onerror="this.src='https://images.unsplash.com/photo-1511108690759-009324a90311?auto=format&fit=crop&w=900&q=85'">
+<img src="images/book6.jpg" alt="Published Book 6">
 </div>
 </article>
 
 </div>
-
 </section>
 
-<!-- ================= STATS ================= -->
+<!-- STATS -->
 
 <section class="stats-section">
 
@@ -1417,10 +1280,9 @@ onerror="this.src='https://images.unsplash.com/photo-1511108690759-009324a90311?
 </div>
 
 </div>
-
 </section>
 
-<!-- ================= WHY ================= -->
+<!-- WHY -->
 
 <section class="section">
 
@@ -1473,132 +1335,11 @@ at the center of the process.
 </div>
 
 </div>
-
 </div>
-
 </div>
-
 </section>
 
-<!-- ================= PRICING ================= -->
-
-<section class="section pricing-section" id="pricing">
-
-<div class="section-head">
-
-<div class="section-label">
-Simple Pricing
-</div>
-
-<h2>
-Choose the support your book needs.
-</h2>
-
-<p>
-Explore our publishing packages and choose the service
-that best fits your project. Need something custom?
-Contact our team for a personalized quote.
-</p>
-
-</div>
-
-<div class="pricing-grid">
-
-<article class="price-card">
-
-<h3>Starter</h3>
-
-<p>
-For authors who need help getting their project started.
-</p>
-
-<div class="price">
-$299 <small>/ starting</small>
-</div>
-
-<ul>
-<li>Initial Project Consultation</li>
-<li>Manuscript Assessment</li>
-<li>Basic Author Guidance</li>
-<li>Publishing Roadmap</li>
-</ul>
-
-<a href="#contact" class="btn btn-outline">
-Get Started
-</a>
-
-</article>
-
-<article class="price-card featured">
-
-<div class="price-badge">
-POPULAR
-</div>
-
-<h3>Professional</h3>
-
-<p>
-For authors who want complete professional support.
-</p>
-
-<div class="price">
-$799 <small>/ starting</small>
-</div>
-
-<ul>
-<li>Professional Editing</li>
-<li>Book Formatting</li>
-<li>Cover Design Guidance</li>
-<li>Publishing Support</li>
-<li>Author Consultation</li>
-</ul>
-
-<a href="#contact" class="btn btn-green">
-Choose Professional
-</a>
-
-</article>
-
-<article class="price-card">
-
-<h3>Premium</h3>
-
-<p>
-Complete publishing support from manuscript to launch.
-</p>
-
-<div class="price">
-$1499 <small>/ starting</small>
-</div>
-
-<ul>
-<li>Ghostwriting Support</li>
-<li>Professional Editing</li>
-<li>Book Design</li>
-<li>Publishing Assistance</li>
-<li>Marketing Guidance</li>
-<li>Launch Support</li>
-</ul>
-
-<a href="#contact" class="btn btn-outline">
-Request Quote
-</a>
-
-</article>
-
-</div>
-
-<div style="text-align:center;margin-top:35px;">
-
-<a href="pricing.html" class="btn btn-green">
-View Full Pricing & Packages →
-</a>
-
-</div>
-
-</section>
-
-<!-- ================= STORIES ================= -->
+<!-- STORIES -->
 
 <section class="section"
 style="background:var(--white);max-width:none;">
@@ -1671,14 +1412,12 @@ publishing experience.
 </article>
 
 </div>
-
 </div>
-
 </section>
 
-<!-- ================= FAQ ================= -->
+<!-- FAQ -->
 
-<section class="section" id="faq">
+<section class="section">
 
 <div class="section-head">
 
@@ -1690,19 +1429,14 @@ FAQ
 Frequently asked questions.
 </h2>
 
-<p>
-Find answers to some of the most common questions
-about our publishing services.
-</p>
-
 </div>
 
 <div class="faq">
 
 <div class="faq-item">
 
-<button class="faq-question" type="button">
-<span>What services do you provide?</span>
+<button class="faq-question">
+What services do you provide?
 <span>+</span>
 </button>
 
@@ -1715,8 +1449,8 @@ marketing and author-support services.
 
 <div class="faq-item">
 
-<button class="faq-question" type="button">
-<span>Can you help with an unfinished manuscript?</span>
+<button class="faq-question">
+Can you help with an unfinished manuscript?
 <span>+</span>
 </button>
 
@@ -1729,8 +1463,8 @@ the right service for your project.
 
 <div class="faq-item">
 
-<button class="faq-question" type="button">
-<span>How do I get started?</span>
+<button class="faq-question">
+How do I get started?
 <span>+</span>
 </button>
 
@@ -1743,8 +1477,8 @@ and our team can discuss the next steps with you.
 
 <div class="faq-item">
 
-<button class="faq-question" type="button">
-<span>Do you work with new authors?</span>
+<button class="faq-question">
+Do you work with new authors?
 <span>+</span>
 </button>
 
@@ -1755,40 +1489,10 @@ experienced writers.
 
 </div>
 
-<div class="faq-item">
-
-<button class="faq-question" type="button">
-<span>How much does publishing cost?</span>
-<span>+</span>
-</button>
-
-<div class="faq-answer">
-Pricing depends on the type of service, manuscript length,
-editing requirements, design and publishing needs.
-Visit our Pricing page or contact us for a custom quote.
 </div>
-
-</div>
-
-<div class="faq-item">
-
-<button class="faq-question" type="button">
-<span>Can I request a custom package?</span>
-<span>+</span>
-</button>
-
-<div class="faq-answer">
-Yes. If your project needs a combination of services,
-contact us and we can discuss a custom package for you.
-</div>
-
-</div>
-
-</div>
-
 </section>
 
-<!-- ================= CONTACT ================= -->
+<!-- CONTACT -->
 
 <section class="contact" id="contact">
 
@@ -1820,43 +1524,23 @@ Angel Pine Publishing
 </h3>
 
 <div class="contact-item">
-
 <strong>Email</strong>
-
-<span>
-hello@angelpinepublishing.com
-</span>
-
+<span>hello@angelpinepublishing.com</span>
 </div>
 
 <div class="contact-item">
-
 <strong>Phone</strong>
-
-<span>
-Contact our publishing team
-</span>
-
+<span>Contact our publishing team</span>
 </div>
 
 <div class="contact-item">
-
 <strong>Hours</strong>
-
-<span>
-Monday – Friday
-</span>
-
+<span>Monday – Friday</span>
 </div>
 
 <div class="contact-item">
-
 <strong>Consultation</strong>
-
-<span>
-Available by appointment
-</span>
-
+<span>Available by appointment</span>
 </div>
 
 </div>
@@ -1900,14 +1584,12 @@ Send Inquiry
 </form>
 
 </div>
-
 </div>
-
 </section>
 
 </main>
 
-<!-- ================= FOOTER ================= -->
+<!-- FOOTER -->
 
 <footer>
 
@@ -1922,9 +1604,8 @@ Angel Pine Publishing
 </div>
 
 <p>
-Professional writing, editing, publishing, design and
-marketing support for authors who want to bring their
-stories to life.
+Professional publishing support for authors,
+writers and businesses. From idea to finished book.
 </p>
 
 </div>
@@ -1936,18 +1617,18 @@ stories to life.
 <a href="#home">Home</a>
 <a href="#services">Services</a>
 <a href="#books">Books</a>
-<a href="#pricing">Pricing</a>
+<a href="pricing.html">Pricing</a>
 
 </div>
 
 <div>
 
-<h4>Publishing</h4>
+<h4>Services</h4>
 
 <a href="#services">Ghostwriting</a>
 <a href="#services">Editing</a>
+<a href="#services">Publishing</a>
 <a href="#services">Book Design</a>
-<a href="#services">Marketing</a>
 
 </div>
 
@@ -1956,9 +1637,10 @@ stories to life.
 <h4>Contact</h4>
 
 <a href="#contact">Hire a Writer</a>
-<a href="#contact">Request a Quote</a>
-<a href="#faq">FAQ</a>
-<a href="pricing.html">Full Pricing</a>
+<a href="#contact">Contact Us</a>
+<a href="mailto:hello@angelpinepublishing.com">
+Email Us
+</a>
 
 </div>
 
@@ -1977,16 +1659,13 @@ Your Story. Your Legacy.
 </div>
 
 </div>
-
 </footer>
 
-<!-- ================= CHAT BUTTON ================= -->
+<!-- CHAT BUTTON -->
 
 <button class="chat" id="chatBtn" aria-label="Contact">
-💬
+✦
 </button>
-
-<!-- ================= JAVASCRIPT ================= -->
 
 <script>
 
@@ -2000,28 +1679,33 @@ const overlay = document.getElementById("overlay");
 function openMenu(){
     sideMenu.classList.add("open");
     overlay.classList.add("show");
-    document.body.style.overflow = "hidden";
+    document.body.style.overflow="hidden";
 }
 
 function closeSideMenu(){
     sideMenu.classList.remove("open");
     overlay.classList.remove("show");
-    document.body.style.overflow = "";
+    document.body.style.overflow="";
 }
 
-menuBtn.addEventListener("click", openMenu);
-closeMenu.addEventListener("click", closeSideMenu);
-overlay.addEventListener("click", closeSideMenu);
+menuBtn.addEventListener("click",openMenu);
+closeMenu.addEventListener("click",closeSideMenu);
+overlay.addEventListener("click",closeSideMenu);
 
+document.querySelectorAll(".menu-link").forEach(link=>{
+    link.addEventListener("click",()=>{
+        closeSideMenu();
+    });
+});
 
 /* SUBMENUS */
 
-document.querySelectorAll(".menu-parent").forEach(parent => {
+document.querySelectorAll(".menu-parent").forEach(parent=>{
 
-    parent.addEventListener("click", () => {
+    parent.addEventListener("click",()=>{
 
-        const subId = parent.getAttribute("data-sub");
-        const submenu = document.getElementById(subId);
+        const id=parent.dataset.sub;
+        const submenu=document.getElementById(id);
 
         submenu.classList.toggle("open");
 
@@ -2029,107 +1713,73 @@ document.querySelectorAll(".menu-parent").forEach(parent => {
 
 });
 
-
-/* CLOSE MENU AFTER LINK CLICK */
-
-document.querySelectorAll(".menu-link").forEach(link => {
-
-    link.addEventListener("click", () => {
-
-        closeSideMenu();
-
-    });
-
-});
-
-
 /* FAQ */
 
-document.querySelectorAll(".faq-question").forEach(button => {
+document.querySelectorAll(".faq-question").forEach(question=>{
 
-    button.addEventListener("click", () => {
+    question.addEventListener("click",()=>{
 
-        const item = button.parentElement;
-
-        document.querySelectorAll(".faq-item").forEach(otherItem => {
-
-            if(otherItem !== item){
-                otherItem.classList.remove("active");
-            }
-
-        });
+        const item=question.parentElement;
+        const icon=question.querySelector("span");
 
         item.classList.toggle("active");
 
+        icon.textContent=item.classList.contains("active")
+            ? "−"
+            : "+";
+
     });
 
 });
-
 
 /* CONTACT FORM */
 
-const contactForm = document.getElementById("contactForm");
-const formMessage = document.getElementById("formMessage");
+const contactForm=document.getElementById("contactForm");
+const formMessage=document.getElementById("formMessage");
 
-contactForm.addEventListener("submit", function(event){
+contactForm.addEventListener("submit",function(e){
 
-    event.preventDefault();
+    e.preventDefault();
 
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const project = document.getElementById("project").value.trim();
-    const message = document.getElementById("message").value.trim();
+    const name=document.getElementById("name").value.trim();
+    const email=document.getElementById("email").value.trim();
+    const project=document.getElementById("project").value.trim();
+    const message=document.getElementById("message").value.trim();
 
     if(!name || !email || !message){
-        formMessage.textContent = "Please complete the required fields.";
+        formMessage.textContent="Please complete the required fields.";
         return;
     }
 
-    const subject = encodeURIComponent(
-        "New Publishing Inquiry - " + name
+    const subject=encodeURIComponent(
+        "New Angel Pine Publishing Inquiry"
     );
 
-    const body = encodeURIComponent(
-        "Name: " + name +
-        "\nEmail: " + email +
-        "\nProject: " + project +
-        "\n\nMessage:\n" + message
+    const body=encodeURIComponent(
+        "Name: "+name+
+        "\nEmail: "+email+
+        "\nProject: "+project+
+        "\n\nMessage:\n"+message
     );
 
-    window.location.href =
-        "mailto:hello@angelpinepublishing.com?subject=" +
-        subject +
-        "&body=" +
-        body;
+    window.location.href=
+        "mailto:hello@angelpinepublishing.com"+
+        "?subject="+subject+
+        "&body="+body;
 
-    formMessage.textContent =
-        "Your email application is opening...";
-
+    formMessage.textContent="Opening your email application...";
 });
-
 
 /* CHAT BUTTON */
 
-document.getElementById("chatBtn").addEventListener("click", function(){
-
+document.getElementById("chatBtn").addEventListener("click",()=>{
     document.getElementById("contact").scrollIntoView({
         behavior:"smooth"
     });
-
-});
-
-
-/* ESC KEY CLOSE MENU */
-
-document.addEventListener("keydown", function(event){
-
-    if(event.key === "Escape"){
-        closeSideMenu();
-    }
-
 });
 
 </script>
 
 </body>
 </html>
+```
