@@ -10,7 +10,6 @@
 content="Angel Pine Publishing — professional publishing, editing, ghostwriting, design and marketing services.">
 
 <style>
-
 :root{
     --cream:#f6f1e7;
     --cream2:#eee7d8;
@@ -45,11 +44,13 @@ a{
     text-decoration:none;
 }
 
-button,input,textarea{
+button,
+input,
+textarea{
     font:inherit;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
 
 header{
     position:sticky;
@@ -111,7 +112,7 @@ header{
     background:var(--green);
 }
 
-/* SIDE MENU */
+/* ================= SIDE MENU ================= */
 
 .side-menu{
     position:fixed;
@@ -185,7 +186,7 @@ header{
     display:block;
 }
 
-/* HERO */
+/* ================= HERO ================= */
 
 .hero{
     min-height:680px;
@@ -269,16 +270,19 @@ header{
     color:white;
 }
 
-/* HERO IMAGE */
+/* ================= HERO IMAGE ================= */
 
 .hero-art{
     min-height:480px;
     border-radius:12px;
     overflow:hidden;
     position:relative;
+
     background:
         linear-gradient(rgba(23,63,50,.12),rgba(23,63,50,.12)),
-        url("images/hero.jpg") center/cover no-repeat;
+        url("https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1400&q=90")
+        center/cover no-repeat;
+
     background-color:#e8e0cd;
 }
 
@@ -304,7 +308,7 @@ header{
     font-size:13px;
 }
 
-/* SECTIONS */
+/* ================= SECTIONS ================= */
 
 .section{
     max-width:1240px;
@@ -339,7 +343,7 @@ header{
     line-height:1.8;
 }
 
-/* SERVICES */
+/* ================= SERVICES ================= */
 
 .services{
     background:var(--white);
@@ -390,7 +394,7 @@ header{
     font-weight:800;
 }
 
-/* CTA */
+/* ================= CTA ================= */
 
 .green-cta{
     background:var(--green);
@@ -427,7 +431,7 @@ header{
     white-space:nowrap;
 }
 
-/* BOOKS */
+/* ================= BOOKS ================= */
 
 .books{
     display:grid;
@@ -465,7 +469,7 @@ header{
     transform:scale(1.04);
 }
 
-/* STATS */
+/* ================= STATS ================= */
 
 .stats-section{
     background:var(--cream2);
@@ -498,7 +502,7 @@ header{
     font-size:13px;
 }
 
-/* WHY */
+/* ================= WHY ================= */
 
 .why-grid{
     display:grid;
@@ -514,10 +518,7 @@ header{
     overflow:hidden;
 
     background:
-        linear-gradient(
-            rgba(23,63,50,.28),
-            rgba(23,63,50,.38)
-        ),
+        linear-gradient(rgba(23,63,50,.25),rgba(23,63,50,.35)),
         url("https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=1400&q=90")
         center/cover no-repeat;
 }
@@ -541,7 +542,7 @@ header{
     );
 }
 
-/* FEATURES */
+/* ================= FEATURES ================= */
 
 .features{
     display:grid;
@@ -566,7 +567,92 @@ header{
     font-size:14px;
 }
 
-/* STORIES */
+/* ================= PRICING ================= */
+
+.pricing-section{
+    background:var(--white);
+}
+
+.pricing-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.price-card{
+    position:relative;
+    background:var(--cream);
+    border:1px solid var(--border);
+    padding:35px 30px;
+    transition:.25s;
+}
+
+.price-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 18px 40px rgba(23,63,50,.12);
+}
+
+.price-card.featured{
+    border:2px solid var(--green);
+    transform:translateY(-8px);
+}
+
+.price-card.featured:hover{
+    transform:translateY(-13px);
+}
+
+.price-badge{
+    position:absolute;
+    top:-14px;
+    left:25px;
+    background:var(--orange);
+    color:white;
+    padding:7px 13px;
+    border-radius:20px;
+    font-size:11px;
+    font-weight:800;
+}
+
+.price-card h3{
+    font-family:Georgia,serif;
+    font-size:28px;
+    font-weight:500;
+    margin-bottom:12px;
+}
+
+.price{
+    font-family:Georgia,serif;
+    color:var(--green);
+    font-size:42px;
+    margin:18px 0;
+}
+
+.price small{
+    font-family:Arial,sans-serif;
+    font-size:13px;
+    color:var(--muted);
+}
+
+.price-card ul{
+    list-style:none;
+    margin:25px 0;
+}
+
+.price-card li{
+    padding:10px 0;
+    border-bottom:1px solid var(--border);
+    color:var(--muted);
+    font-size:14px;
+}
+
+.price-card li:before{
+    content:"✓";
+    color:var(--green2);
+    font-weight:bold;
+    margin-right:9px;
+}
+
+/* ================= STORIES ================= */
 
 .story-grid{
     display:grid;
@@ -642,7 +728,7 @@ header{
     font-size:14px;
 }
 
-/* FAQ */
+/* ================= FAQ ================= */
 
 .faq{
     max-width:850px;
@@ -667,6 +753,15 @@ header{
     cursor:pointer;
 }
 
+.faq-question span{
+    font-size:25px;
+    transition:.25s;
+}
+
+.faq-item.active .faq-question span{
+    transform:rotate(45deg);
+}
+
 .faq-answer{
     display:none;
     color:var(--muted);
@@ -679,7 +774,7 @@ header{
     display:block;
 }
 
-/* CONTACT */
+/* ================= CONTACT ================= */
 
 .contact{
     background:var(--white);
@@ -757,7 +852,7 @@ textarea:focus{
     font-size:14px;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 
 footer{
     background:#102e25;
@@ -815,7 +910,7 @@ footer{
     gap:15px;
 }
 
-/* CHAT */
+/* ================= CHAT ================= */
 
 .chat{
     position:fixed;
@@ -833,7 +928,7 @@ footer{
     z-index:900;
 }
 
-/* RESPONSIVE */
+/* ================= RESPONSIVE ================= */
 
 @media(max-width:1000px){
 
@@ -846,7 +941,8 @@ footer{
         min-height:420px;
     }
 
-    .books{
+    .books,
+    .pricing-grid{
         grid-template-columns:repeat(2,1fr);
     }
 
@@ -917,7 +1013,8 @@ footer{
     }
 
     .service-grid,
-    .books{
+    .books,
+    .pricing-grid{
         grid-template-columns:1fr;
     }
 
@@ -955,38 +1052,41 @@ footer{
         flex-direction:column;
     }
 
-}
+    .price-card.featured{
+        transform:none;
+    }
 
+    .price-card.featured:hover{
+        transform:translateY(-6px);
+    }
+}
 </style>
 </head>
 
 <body>
 
-<header>
+<!-- ================= HEADER ================= -->
 
+<header>
 <div class="nav">
 
 <a href="#home" class="logo">
-
 <div class="logo-mark">✦</div>
-
 <span>Angel Pine Publishing</span>
-
 </a>
 
-<button class="menu-btn" id="menuBtn">
-
+<button class="menu-btn" id="menuBtn" aria-label="Open menu">
 <span></span>
 <span></span>
 <span></span>
-
 </button>
 
 </div>
-
 </header>
 
 <div class="overlay" id="overlay"></div>
+
+<!-- ================= SIDE MENU ================= -->
 
 <aside class="side-menu" id="sideMenu">
 
@@ -1001,12 +1101,10 @@ Ghostwriting & Editing +
 </div>
 
 <div class="submenu" id="ghost">
-
 <a href="#services">Ghostwriting</a>
 <a href="#services">Editing & Proofreading</a>
 <a href="#services">Book Writing</a>
 <a href="#services">Author Support</a>
-
 </div>
 
 <div class="menu-parent" data-sub="publish">
@@ -1014,16 +1112,25 @@ Publishing +
 </div>
 
 <div class="submenu" id="publish">
-
 <a href="#services">Book Publishing</a>
 <a href="#books">Published Works</a>
 <a href="#contact">Publishing Consultation</a>
-
 </div>
 
 <a href="#services" class="menu-link">Marketing</a>
+
 <a href="#services" class="menu-link">Designing</a>
+
+<a href="#pricing" class="menu-link">Pricing</a>
+
+<a href="pricing.html" class="menu-link">
+View Full Pricing Page →
+</a>
+
 <a href="#contact" class="menu-link">Hire a Writer</a>
+
+<a href="#faq" class="menu-link">FAQ</a>
+
 <a href="#contact" class="menu-link">Contact</a>
 
 </nav>
@@ -1031,6 +1138,8 @@ Publishing +
 </aside>
 
 <main id="home">
+
+<!-- ================= HERO ================= -->
 
 <section class="hero">
 
@@ -1082,6 +1191,8 @@ We help turn that idea into something readers remember.
 
 </section>
 
+<!-- ================= SERVICES ================= -->
+
 <section class="section services" id="services">
 
 <div class="section-head">
@@ -1104,110 +1215,70 @@ at every stage of the publishing journey.
 <div class="service-grid">
 
 <article class="service-card">
-
 <div class="service-icon">✍</div>
-
 <h3>Ghostwriting</h3>
-
 <p>
 Turn your ideas, experiences and expertise into a compelling,
 professionally written manuscript.
 </p>
-
-<a href="#contact" class="service-link">
-Learn More →
-</a>
-
+<a href="#contact" class="service-link">Learn More →</a>
 </article>
 
 <article class="service-card">
-
 <div class="service-icon">✓</div>
-
 <h3>Editing</h3>
-
 <p>
 Refine your manuscript with professional editing,
 proofreading and editorial guidance.
 </p>
-
-<a href="#contact" class="service-link">
-Learn More →
-</a>
-
+<a href="#contact" class="service-link">Learn More →</a>
 </article>
 
 <article class="service-card">
-
 <div class="service-icon">▣</div>
-
 <h3>Publishing</h3>
-
 <p>
 Prepare your book for publication with a complete,
 professional publishing process.
 </p>
-
-<a href="#contact" class="service-link">
-Learn More →
-</a>
-
+<a href="#contact" class="service-link">Learn More →</a>
 </article>
 
 <article class="service-card">
-
 <div class="service-icon">◇</div>
-
 <h3>Book Design</h3>
-
 <p>
 Create memorable covers and interiors that give your
 book a polished professional appearance.
 </p>
-
-<a href="#contact" class="service-link">
-Learn More →
-</a>
-
+<a href="#contact" class="service-link">Learn More →</a>
 </article>
 
 <article class="service-card">
-
 <div class="service-icon">◎</div>
-
 <h3>Marketing</h3>
-
 <p>
 Build awareness around your book and connect it with
 the right readers.
 </p>
-
-<a href="#contact" class="service-link">
-Learn More →
-</a>
-
+<a href="#contact" class="service-link">Learn More →</a>
 </article>
 
 <article class="service-card">
-
 <div class="service-icon">★</div>
-
 <h3>Author Support</h3>
-
 <p>
 Get professional guidance from concept development
 through launch and beyond.
 </p>
-
-<a href="#contact" class="service-link">
-Learn More →
-</a>
-
+<a href="#contact" class="service-link">Learn More →</a>
 </article>
 
 </div>
 
 </section>
+
+<!-- ================= CTA ================= -->
 
 <section class="green-cta">
 
@@ -1234,7 +1305,7 @@ Request a Quote
 
 </section>
 
-<!-- BOOKS -->
+<!-- ================= BOOKS ================= -->
 
 <section class="section" id="books">
 
@@ -1259,43 +1330,63 @@ authors through the publishing journey.
 
 <article class="book">
 <div class="book-cover">
-<img src="images/book1.jpg" alt="Published Book 1">
+<img
+src="images/book1.jpg"
+alt="Published Book 1"
+onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=900&q=85'">
 </div>
 </article>
 
 <article class="book">
 <div class="book-cover">
-<img src="images/book2.jpg" alt="Published Book 2">
+<img
+src="images/book2.jpg"
+alt="Published Book 2"
+onerror="this.src='https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=900&q=85'">
 </div>
 </article>
 
 <article class="book">
 <div class="book-cover">
-<img src="images/book3.jpg" alt="Published Book 3">
+<img
+src="images/book3.jpg"
+alt="Published Book 3"
+onerror="this.src='https://images.unsplash.com/photo-1543002588-bfa74002ed7e?auto=format&fit=crop&w=900&q=85'">
 </div>
 </article>
 
 <article class="book">
 <div class="book-cover">
-<img src="images/book4.jpg" alt="Published Book 4">
+<img
+src="images/book4.jpg"
+alt="Published Book 4"
+onerror="this.src='https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=900&q=85'">
 </div>
 </article>
 
 <article class="book">
 <div class="book-cover">
-<img src="images/book5.jpg" alt="Published Book 5">
+<img
+src="images/book5.jpg"
+alt="Published Book 5"
+onerror="this.src='https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=900&q=85'">
 </div>
 </article>
 
 <article class="book">
 <div class="book-cover">
-<img src="images/book6.jpg" alt="Published Book 6">
+<img
+src="images/book6.jpg"
+alt="Published Book 6"
+onerror="this.src='https://images.unsplash.com/photo-1511108690759-009324a90311?auto=format&fit=crop&w=900&q=85'">
 </div>
 </article>
 
 </div>
 
 </section>
+
+<!-- ================= STATS ================= -->
 
 <section class="stats-section">
 
@@ -1329,6 +1420,8 @@ authors through the publishing journey.
 
 </section>
 
+<!-- ================= WHY ================= -->
+
 <section class="section">
 
 <div class="why-grid">
@@ -1348,55 +1441,35 @@ Your vision stays at the heart of everything we do.
 <div class="features">
 
 <div class="feature">
-
-<strong>
-Professional Quality
-</strong>
-
+<strong>Professional Quality</strong>
 <p>
 Experienced professionals working carefully
 on every part of your project.
 </p>
-
 </div>
 
 <div class="feature">
-
-<strong>
-Personal Guidance
-</strong>
-
+<strong>Personal Guidance</strong>
 <p>
 Clear communication and support throughout
 your publishing journey.
 </p>
-
 </div>
 
 <div class="feature">
-
-<strong>
-Complete Services
-</strong>
-
+<strong>Complete Services</strong>
 <p>
 Writing, editing, design, publishing and marketing
 support in one place.
 </p>
-
 </div>
 
 <div class="feature">
-
-<strong>
-Author First
-</strong>
-
+<strong>Author First</strong>
 <p>
 Your goals, your voice and your story remain
 at the center of the process.
 </p>
-
 </div>
 
 </div>
@@ -1407,7 +1480,128 @@ at the center of the process.
 
 </section>
 
-<section class="section" style="background:var(--white);max-width:none;">
+<!-- ================= PRICING ================= -->
+
+<section class="section pricing-section" id="pricing">
+
+<div class="section-head">
+
+<div class="section-label">
+Simple Pricing
+</div>
+
+<h2>
+Choose the support your book needs.
+</h2>
+
+<p>
+Explore our publishing packages and choose the service
+that best fits your project. Need something custom?
+Contact our team for a personalized quote.
+</p>
+
+</div>
+
+<div class="pricing-grid">
+
+<article class="price-card">
+
+<h3>Starter</h3>
+
+<p>
+For authors who need help getting their project started.
+</p>
+
+<div class="price">
+$299 <small>/ starting</small>
+</div>
+
+<ul>
+<li>Initial Project Consultation</li>
+<li>Manuscript Assessment</li>
+<li>Basic Author Guidance</li>
+<li>Publishing Roadmap</li>
+</ul>
+
+<a href="#contact" class="btn btn-outline">
+Get Started
+</a>
+
+</article>
+
+<article class="price-card featured">
+
+<div class="price-badge">
+POPULAR
+</div>
+
+<h3>Professional</h3>
+
+<p>
+For authors who want complete professional support.
+</p>
+
+<div class="price">
+$799 <small>/ starting</small>
+</div>
+
+<ul>
+<li>Professional Editing</li>
+<li>Book Formatting</li>
+<li>Cover Design Guidance</li>
+<li>Publishing Support</li>
+<li>Author Consultation</li>
+</ul>
+
+<a href="#contact" class="btn btn-green">
+Choose Professional
+</a>
+
+</article>
+
+<article class="price-card">
+
+<h3>Premium</h3>
+
+<p>
+Complete publishing support from manuscript to launch.
+</p>
+
+<div class="price">
+$1499 <small>/ starting</small>
+</div>
+
+<ul>
+<li>Ghostwriting Support</li>
+<li>Professional Editing</li>
+<li>Book Design</li>
+<li>Publishing Assistance</li>
+<li>Marketing Guidance</li>
+<li>Launch Support</li>
+</ul>
+
+<a href="#contact" class="btn btn-outline">
+Request Quote
+</a>
+
+</article>
+
+</div>
+
+<div style="text-align:center;margin-top:35px;">
+
+<a href="pricing.html" class="btn btn-green">
+View Full Pricing & Packages →
+</a>
+
+</div>
+
+</section>
+
+<!-- ================= STORIES ================= -->
+
+<section class="section"
+style="background:var(--white);max-width:none;">
 
 <div style="max-width:1240px;margin:auto;">
 
@@ -1482,7 +1676,9 @@ publishing experience.
 
 </section>
 
-<section class="section">
+<!-- ================= FAQ ================= -->
+
+<section class="section" id="faq">
 
 <div class="section-head">
 
@@ -1494,14 +1690,19 @@ FAQ
 Frequently asked questions.
 </h2>
 
+<p>
+Find answers to some of the most common questions
+about our publishing services.
+</p>
+
 </div>
 
 <div class="faq">
 
 <div class="faq-item">
 
-<button class="faq-question">
-What services do you provide?
+<button class="faq-question" type="button">
+<span>What services do you provide?</span>
 <span>+</span>
 </button>
 
@@ -1514,8 +1715,8 @@ marketing and author-support services.
 
 <div class="faq-item">
 
-<button class="faq-question">
-Can you help with an unfinished manuscript?
+<button class="faq-question" type="button">
+<span>Can you help with an unfinished manuscript?</span>
 <span>+</span>
 </button>
 
@@ -1528,8 +1729,8 @@ the right service for your project.
 
 <div class="faq-item">
 
-<button class="faq-question">
-How do I get started?
+<button class="faq-question" type="button">
+<span>How do I get started?</span>
 <span>+</span>
 </button>
 
@@ -1542,8 +1743,8 @@ and our team can discuss the next steps with you.
 
 <div class="faq-item">
 
-<button class="faq-question">
-Do you work with new authors?
+<button class="faq-question" type="button">
+<span>Do you work with new authors?</span>
 <span>+</span>
 </button>
 
@@ -1554,9 +1755,40 @@ experienced writers.
 
 </div>
 
+<div class="faq-item">
+
+<button class="faq-question" type="button">
+<span>How much does publishing cost?</span>
+<span>+</span>
+</button>
+
+<div class="faq-answer">
+Pricing depends on the type of service, manuscript length,
+editing requirements, design and publishing needs.
+Visit our Pricing page or contact us for a custom quote.
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<button class="faq-question" type="button">
+<span>Can I request a custom package?</span>
+<span>+</span>
+</button>
+
+<div class="faq-answer">
+Yes. If your project needs a combination of services,
+contact us and we can discuss a custom package for you.
+</div>
+
+</div>
+
 </div>
 
 </section>
+
+<!-- ================= CONTACT ================= -->
 
 <section class="contact" id="contact">
 
@@ -1588,23 +1820,43 @@ Angel Pine Publishing
 </h3>
 
 <div class="contact-item">
+
 <strong>Email</strong>
-<span>hello@angelpinepublishing.com</span>
+
+<span>
+hello@angelpinepublishing.com
+</span>
+
 </div>
 
 <div class="contact-item">
+
 <strong>Phone</strong>
-<span>Contact our publishing team</span>
+
+<span>
+Contact our publishing team
+</span>
+
 </div>
 
 <div class="contact-item">
+
 <strong>Hours</strong>
-<span>Monday – Friday</span>
+
+<span>
+Monday – Friday
+</span>
+
 </div>
 
 <div class="contact-item">
+
 <strong>Consultation</strong>
-<span>Available by appointment</span>
+
+<span>
+Available by appointment
+</span>
+
 </div>
 
 </div>
@@ -1655,6 +1907,8 @@ Send Inquiry
 
 </main>
 
+<!-- ================= FOOTER ================= -->
+
 <footer>
 
 <div class="footer-inner">
@@ -1668,41 +1922,43 @@ Angel Pine Publishing
 </div>
 
 <p>
-Helping authors transform ideas into polished,
-professional books ready for readers.
+Professional writing, editing, publishing, design and
+marketing support for authors who want to bring their
+stories to life.
 </p>
 
 </div>
 
 <div>
 
-<h4>Services</h4>
+<h4>Explore</h4>
+
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#books">Books</a>
+<a href="#pricing">Pricing</a>
+
+</div>
+
+<div>
+
+<h4>Publishing</h4>
 
 <a href="#services">Ghostwriting</a>
 <a href="#services">Editing</a>
-<a href="#services">Publishing</a>
-<a href="#services">Design</a>
+<a href="#services">Book Design</a>
+<a href="#services">Marketing</a>
 
 </div>
 
 <div>
 
-<h4>Company</h4>
+<h4>Contact</h4>
 
-<a href="#home">About Us</a>
-<a href="#books">Published Works</a>
-<a href="#home">Our Team</a>
-<a href="#contact">Contact</a>
-
-</div>
-
-<div>
-
-<h4>Get Started</h4>
-
-<a href="#contact">Request a Quote</a>
 <a href="#contact">Hire a Writer</a>
-<a href="#contact">Consultation</a>
+<a href="#contact">Request a Quote</a>
+<a href="#faq">FAQ</a>
+<a href="pricing.html">Full Pricing</a>
 
 </div>
 
@@ -1715,7 +1971,7 @@ professional books ready for readers.
 </span>
 
 <span>
-Professional Publishing Services
+Your Story. Your Legacy.
 </span>
 
 </div>
@@ -1724,9 +1980,13 @@ Professional Publishing Services
 
 </footer>
 
-<button class="chat" id="chatBtn">
+<!-- ================= CHAT BUTTON ================= -->
+
+<button class="chat" id="chatBtn" aria-label="Contact">
 💬
 </button>
+
+<!-- ================= JAVASCRIPT ================= -->
 
 <script>
 
@@ -1740,29 +2000,28 @@ const overlay = document.getElementById("overlay");
 function openMenu(){
     sideMenu.classList.add("open");
     overlay.classList.add("show");
+    document.body.style.overflow = "hidden";
 }
 
 function closeSideMenu(){
     sideMenu.classList.remove("open");
     overlay.classList.remove("show");
+    document.body.style.overflow = "";
 }
 
-menuBtn.addEventListener("click",openMenu);
-closeMenu.addEventListener("click",closeSideMenu);
-overlay.addEventListener("click",closeSideMenu);
+menuBtn.addEventListener("click", openMenu);
+closeMenu.addEventListener("click", closeSideMenu);
+overlay.addEventListener("click", closeSideMenu);
 
-document.querySelectorAll(".menu-link").forEach(link=>{
-    link.addEventListener("click",closeSideMenu);
-});
 
 /* SUBMENUS */
 
-document.querySelectorAll(".menu-parent").forEach(parent=>{
+document.querySelectorAll(".menu-parent").forEach(parent => {
 
-    parent.addEventListener("click",()=>{
+    parent.addEventListener("click", () => {
 
-        const id = parent.getAttribute("data-sub");
-        const submenu = document.getElementById(id);
+        const subId = parent.getAttribute("data-sub");
+        const submenu = document.getElementById(subId);
 
         submenu.classList.toggle("open");
 
@@ -1770,81 +2029,104 @@ document.querySelectorAll(".menu-parent").forEach(parent=>{
 
 });
 
+
+/* CLOSE MENU AFTER LINK CLICK */
+
+document.querySelectorAll(".menu-link").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        closeSideMenu();
+
+    });
+
+});
+
+
 /* FAQ */
 
-document.querySelectorAll(".faq-question").forEach(button=>{
+document.querySelectorAll(".faq-question").forEach(button => {
 
-    button.addEventListener("click",()=>{
+    button.addEventListener("click", () => {
 
         const item = button.parentElement;
-        const active = item.classList.contains("active");
 
-        document.querySelectorAll(".faq-item").forEach(other=>{
+        document.querySelectorAll(".faq-item").forEach(otherItem => {
 
-            other.classList.remove("active");
-
-            other.querySelector(
-                ".faq-question span"
-            ).textContent="+";
+            if(otherItem !== item){
+                otherItem.classList.remove("active");
+            }
 
         });
 
-        if(!active){
-
-            item.classList.add("active");
-
-            button.querySelector("span").textContent="−";
-
-        }
+        item.classList.toggle("active");
 
     });
 
 });
+
 
 /* CONTACT FORM */
 
-document.getElementById("contactForm").addEventListener(
-"submit",
-function(e){
+const contactForm = document.getElementById("contactForm");
+const formMessage = document.getElementById("formMessage");
 
-    e.preventDefault();
+contactForm.addEventListener("submit", function(event){
 
-    const name =
-    document.getElementById("name").value.trim();
+    event.preventDefault();
 
-    const email =
-    document.getElementById("email").value.trim();
-
-    const message =
-    document.getElementById("message").value.trim();
-
-    const formMessage =
-    document.getElementById("formMessage");
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const project = document.getElementById("project").value.trim();
+    const message = document.getElementById("message").value.trim();
 
     if(!name || !email || !message){
-
-        formMessage.textContent =
-        "Please complete the required fields.";
-
+        formMessage.textContent = "Please complete the required fields.";
         return;
-
     }
 
-    formMessage.textContent =
-    "Thank you! Your inquiry has been received.";
+    const subject = encodeURIComponent(
+        "New Publishing Inquiry - " + name
+    );
 
-    this.reset();
+    const body = encodeURIComponent(
+        "Name: " + name +
+        "\nEmail: " + email +
+        "\nProject: " + project +
+        "\n\nMessage:\n" + message
+    );
+
+    window.location.href =
+        "mailto:hello@angelpinepublishing.com?subject=" +
+        subject +
+        "&body=" +
+        body;
+
+    formMessage.textContent =
+        "Your email application is opening...";
 
 });
 
-/* CHAT */
 
-document.getElementById("chatBtn").addEventListener(
-"click",
-()=>{
+/* CHAT BUTTON */
+
+document.getElementById("chatBtn").addEventListener("click", function(){
+
     document.getElementById("contact").scrollIntoView({
         behavior:"smooth"
     });
+
+});
+
+
+/* ESC KEY CLOSE MENU */
+
+document.addEventListener("keydown", function(event){
+
+    if(event.key === "Escape"){
+        closeSideMenu();
+    }
+
 });
 
 </script>
